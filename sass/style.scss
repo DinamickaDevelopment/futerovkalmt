@@ -91,7 +91,7 @@ $text-color: #2c3e50;
         text-align: center;
         cursor: pointer;
         background-color: $general-color;
-        border-radius: 100% 0 0 100%;
+        border-radius: 30px 0 0 30px;
 
         .lang-text {
             @include setFont(12px,200,white,"proxima-nova-condensed",sans-serif);
@@ -304,8 +304,11 @@ $text-color: #2c3e50;
     background-position: center;
     background-size: cover;
     position: relative;
+    overflow: hidden;
 
     .title {
+        text-align: center;
+        margin-top: 100px;
         @include setFont(46px,100,white,"proxima-nova", sans-serif);
     }
 
@@ -325,7 +328,7 @@ $text-color: #2c3e50;
 //carousel classes
 .roundabout-holder {
     padding: 0;
-    margin: 0 auto;
+    margin: 30px auto 100px !important;
     height: 500px;
     width: 800px;
 }
@@ -333,16 +336,15 @@ $text-color: #2c3e50;
 .roundabout-moveable-item {
     cursor: pointer;
     display: block;
-    @include display-flex(center,center)
+    @include display-flex(center,center);
+    filter: blur(2px);
+    transition: filter 0.2s linear;
 }
 
-.roundabout-moveable-item img {
-    filter: blur(2px);
-    transition:filter 0.2s linear;
-}
-.next-slide img {
+.next-slide {
     filter: blur(0);
 }
+
 .roundabout-moveable-item:before {
     content: '\A';
     position: absolute;
@@ -351,7 +353,7 @@ $text-color: #2c3e50;
     top: 0;
     left: 0;
     background: rgba(0,0,0,0.6);
-    z-index:99;
+    z-index: 99;
     transition: all 0.2s;
 }
 
@@ -360,25 +362,219 @@ $text-color: #2c3e50;
 }
 
 #carousel li {
-    box-shadow: 0 0 10px #000;
-    text-align: center;
-    cursor: pointer;
-    overflow: hidden;
     background: #000;
     opacity: 1 !important;
+    position: relative;
+
+    span.undertext {
+        position: absolute;
+        top: 100%;
+        line-height: 20px;
+        left: 5%;
+        @include setFont(18px,200,white,"proxima-nova", sans-serif);
+    }
+
+    .img-wrapper {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
 }
 
 
 #carousel li.roundabout-in-focus {
     cursor: default;
 }
+//table section
+#table {
+    text-align: center;
 
-#carousel li span {
+    .title {
+        @include setFont(46px,100,$text-color,"proxima-nova", sans-serif);
+    }
+
+    .subtitle {
+        @include setFont(24px,400,$text-color,"proxima-nova", sans-serif);
+    }
+
+    .table-info {
+        @include setFont(24px,500,$text-color,"proxima-nova", sans-serif);
+    }
+
+    .table_wrapper {
+        table {
+            width: 100%;
+            text-align: center;
+            @include setFont(16px,200,$text-color,"proxima-nova", sans-serif);
+
+            thead td {
+                @include setFont(16px,400,white,"proxima-nova-condensed",sans-serif);
+                letter-spacing: -0.04em;
+                background-color: #f45c43;
+                border: 1px solid white;
+                border-top: none;
+                height: 30px;
+                vertical-align: middle;
+            }
+
+            tbody td {
+                height: 40px;
+            }
+        }
+    }
+
+    .phisic-chemic {
+        width: 100%;
+        height: 60px;
+        background: $general-color;
+
+        .btn {
+            width: 320px;
+            border: 2px solid white;
+            @include setFont(16px,600,white,"proxima-nova",sans-serif);
+            border-radius: 25px;
+            margin: 11px 0;
+        }
+    }
+
+    .pop-up {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        width: 80%;
+        height: 80%;
+        padding: 0 20px;
+        z-index: 9999;
+        background-color: white;
+        box-shadow: 0px 0px 9px 2px #000000;
+        display: none;
+
+        .pop-up-wrapper {
+            @include display-flex(center,center);
+            height: 100%;
+        }
+
+        .closebtn {
+            position: absolute;
+            top: 3%;
+            right: 3%;
+            @include setFont(24px, 400, $text-color,inherit);
+            cursor: pointer;
+        }
+    }
+}
+
+.dark-layout {
+    position: fixed;
+    z-index: 9998;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    background: rgba(0,0,0,0.5);
     display: none;
-    position: absolute;
-    width: 260px;
-    border-radius: 5px;
-    margin: 270px 88px;
-    overflow: hidden;
-    box-shadow: 0 0 8px #000;
+}
+//references section
+#references {
+    .title {
+        @include setFont(46px,100,$text-color,"proxima-nova", sans-serif);
+        text-align: center;
+        margin: 30px 0;
+    }
+
+    .cards-holder {
+        @include display-flex(center,space-between);
+
+        .card {
+        }
+    }
+}
+//contact section
+#contact {
+    .title {
+        @include setFont(46px,100,$text-color,"proxima-nova", sans-serif);
+        text-align: center;
+        margin: 30px 0;
+    }
+
+    .contact-holder {
+        @include display-flex(center,space-between);
+
+        .contact-area {
+            width: 100%;
+            height: 325px;
+            background-color: green;
+            @include display-flex(flex-end,center);
+            position: relative;
+
+            .label-contact {
+                @include setFont(16px,600,white,"proxima-nova", sans-serif);
+                width: 145px;
+                height: 30px;
+                line-height: 30px;
+                background-color: #f45c43;
+                border-radius: 30px 0 0 30px;
+                position: absolute;
+                right: 0;
+                top: 5%;
+                text-align: center;
+            }
+
+            .contact-info {
+                background-color: rgba(255,255,255,0.85);
+                width: 100%;
+
+                p {
+                    @include setFont(16px,400,$text-color,"proxima-nova-condensed",sans-serif);
+                    margin: 0;
+                    text-align: right;
+                }
+
+                p.name {
+                    font-weight: 600;
+                }
+            }
+
+            @for $i from 1 through 4 {
+                &.background-#{$i} {
+                    background-image: url('../img/contact-#{$i}.png');
+                }
+            }
+        }
+    }
+
+    .email-area {
+        background-color: #f45c43;
+
+        .contact-email {
+            @include setFont(18px,200,white,"proxima-nova", sans-serif);
+            width: 100%;
+            text-align: center;
+            padding: 15px 0;
+        }
+    }
+}
+//footer section
+footer {
+    background-color: #343642;
+    padding:50px 0;
+    .content {
+        @include setFont(18px,400,White,"proxima-nova-condensed",sans-serif);
+    }
+
+    nav {
+        display: flex;
+        flex-flow: column wrap;
+
+        a {
+            text-align: right;
+            @include setFont(16px,400,white,"proxima-nova", sans-serif);
+            margin:4px 0;
+            &:hover{
+                color:aqua;
+                text-decoration:none;
+            }
+        }
+    }
 }

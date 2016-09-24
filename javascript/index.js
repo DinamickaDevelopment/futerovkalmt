@@ -10,7 +10,17 @@ var videoResize = function () {
     $('.iframe-youtube').attr("height", height);
     $('#video').css("height", height+"px");
 }
-videoResize();
+$('.phisic-chemic .btn').bind('click', function () {
+    if ($('.pop-up').css('display') == "none") {
+        $('.pop-up,.dark-layout').fadeIn(200);
+    }
+})
+$('.closebtn').bind('click', function () {
+    if ($('.pop-up').css('display') == "block") {
+        $('.pop-up,.dark-layout').fadeOut(200);
+    }
+});
+    videoResize();
 $(window).resize(function () {
     videoResize();
 });
@@ -93,11 +103,9 @@ $(window).resize(function () {
 
     var repalceNavigation = function (index) {
         nextelem = $("#carousel").children('li')[index];
-        elemWidth = $(nextelem).children('img').attr('width')
+        elemWidth = $(nextelem).children('div').children('img').attr('width')
         containerwidth = $("#carousel").width();
         left = (containerwidth - elemWidth) / 2 - 42;
-        console.log($("#carousel").children('li')[index])
-        console.log(elemWidth);
         $('.prev').css('left', left + 'px');
         $('.next').css('left', (left + parseInt(elemWidth) + 34) + 'px');
         $(nextelem).addClass('next-slide');
@@ -106,10 +114,11 @@ $(window).resize(function () {
     $('#carousel').roundabout({
         btnNext: ".next",
         btnPrev: ".prev",
-        clickToFocus:false,
+        clickToFocus: false,
         minScale: 0.8,
         childSelector: "li",
         autoplay: false,
+        autoplayDuration: 500000,
         autoplayPauseOnHover: true
     });
     $('.roundabout-in-focus').addClass('next-slide');
