@@ -1,4 +1,4 @@
-﻿//.iframe-youtube
+﻿//Logic for adaptive iframe of video with saving of ratio
 var videoResize = function () {
     unit = Math.round($(window).width() / 16);
     width = $(window).width();
@@ -10,6 +10,29 @@ var videoResize = function () {
     $('.iframe-youtube').attr("height", height);
     $('#video').css("height", height+"px");
 }
+var gallaryResize = function () {
+    $('#carousel').removeAttr('style')
+    $('#carousel').removeAttr('class')
+    $('#carousel li').removeAttr('style')
+    $('#carousel li').removeAttr('class')
+    $('#carousel div.next,#carousel div.prev').removeAttr('style')
+
+    $('#carousel').roundabout({
+        btnNext: ".next",
+        btnPrev: ".prev",
+        clickToFocus: false,
+        minScale: 0.8,
+        childSelector: "li",
+        autoplay: false,
+        autoplayDuration: 500000,
+        autoplayPauseOnHover: true
+    });
+    $('.roundabout-in-focus').addClass('next-slide');
+    $('.prev').css('left', (parseInt($('.roundabout-in-focus').css("left")) - 40) + 'px');
+    $('.next').css('left', (parseInt($('.roundabout-in-focus').css("left")) + $('.roundabout-in-focus').width() - 3) + 'px');
+
+}
+// Pop-up logick
 $('.phisic-chemic .btn').bind('click', function () {
     if ($('.pop-up').css('display') == "none") {
         $('.pop-up,.dark-layout').fadeIn(200);
@@ -20,10 +43,16 @@ $('.closebtn').bind('click', function () {
         $('.pop-up,.dark-layout').fadeOut(200);
     }
 });
-    videoResize();
-$(window).resize(function () {
-    videoResize();
+//Smooth scroll to anchor
+$('.header-content .menu-element a,footer nav a ').on('click', function (event) {
+    event.preventDefault();
+    $('html, body').animate({
+        scrollTop: $($.attr(this, 'href')).offset().top
+    }, 400);
 });
+
+
+new WOW().init();
 /**
  * jQuery Roundabout - v2.4.2
  * http://fredhq.com/projects/roundabout
@@ -103,14 +132,20 @@ $(window).resize(function () {
 
     var repalceNavigation = function (index) {
         nextelem = $("#carousel").children('li')[index];
-        elemWidth = $(nextelem).children('div').children('img').attr('width')
-        containerwidth = $("#carousel").width();
-        left = (containerwidth - elemWidth) / 2 - 42;
-        $('.prev').css('left', left + 'px');
-        $('.next').css('left', (left + parseInt(elemWidth) + 34) + 'px');
+        //elemWidth = $(nextelem).children('div').children('img').attr('width')
+        //containerwidth = $("#carousel").width();
+        //left = (containerwidth - elemWidth) / 2 - 42;
+        //$('.prev').css('left', left + 'px');
+        //$('.next').css('left', (left + parseInt(elemWidth) + 34) + 'px');
         $(nextelem).addClass('next-slide');
 
     }
+    videoResize();
+    $(window).resize(function () {
+        videoResize();
+        gallaryResize();
+
+    });
     $('#carousel').roundabout({
         btnNext: ".next",
         btnPrev: ".prev",

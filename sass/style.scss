@@ -167,6 +167,8 @@ $text-color: #2c3e50;
 }
 //features section
 #features {
+    padding: 30px 0;
+
     .features-in-text {
         @include setFont(18px,400,$text-color,"proxima-nova-condensed",sans-serif);
         text-align: right;
@@ -185,6 +187,7 @@ $text-color: #2c3e50;
         .tips-icon {
             width: 40px;
             height: 50px;
+            flex-shrink: 0;
 
             @for $i from 1 through 4 {
                 &.icon-#{$i} {
@@ -228,7 +231,7 @@ $text-color: #2c3e50;
 
             &:before {
                 background-color: #f45c43;
-                left: 152px;
+                left: 100%;
             }
         }
     }
@@ -239,7 +242,7 @@ $text-color: #2c3e50;
     border-left: 2px solid #f45c43;
 
     .title {
-        color: $text-color;
+        color: $text-color !important;
     }
 
     .futer-content {
@@ -256,7 +259,7 @@ $text-color: #2c3e50;
 
             &:before {
                 background-color: #f45c43;
-                right: 152px;
+                right: 100%;
             }
         }
     }
@@ -290,7 +293,7 @@ $text-color: #2c3e50;
 
             &:before {
                 content: '';
-                width: 18px;
+                width: 12%;
                 height: 2px;
                 position: absolute;
             }
@@ -442,9 +445,7 @@ $text-color: #2c3e50;
         top: 50%;
         left: 50%;
         transform: translate(-50%,-50%);
-        width: 80%;
-        height: 80%;
-        padding: 0 20px;
+        padding: 45px;
         z-index: 9999;
         background-color: white;
         box-shadow: 0px 0px 9px 2px #000000;
@@ -457,10 +458,14 @@ $text-color: #2c3e50;
 
         .closebtn {
             position: absolute;
-            top: 3%;
+            top: 2%;
             right: 3%;
             @include setFont(24px, 400, $text-color,inherit);
             cursor: pointer;
+        }
+
+        table tbody td {
+            height: 30px;
         }
     }
 }
@@ -484,9 +489,11 @@ $text-color: #2c3e50;
     }
 
     .cards-holder {
-        @include display-flex(center,space-between);
+        @include display-flex(center,center);
+        flex-wrap: wrap;
 
         .card {
+            margin: 5px;
         }
     }
 }
@@ -558,7 +565,8 @@ $text-color: #2c3e50;
 //footer section
 footer {
     background-color: #343642;
-    padding:50px 0;
+    padding: 50px 0;
+
     .content {
         @include setFont(18px,400,White,"proxima-nova-condensed",sans-serif);
     }
@@ -570,11 +578,283 @@ footer {
         a {
             text-align: right;
             @include setFont(16px,400,white,"proxima-nova", sans-serif);
-            margin:4px 0;
-            &:hover{
-                color:aqua;
-                text-decoration:none;
+            margin: 4px 0;
+
+            &:hover {
+                color: aqua;
+                text-decoration: none;
             }
+        }
+    }
+}
+//Adaptive section
+@media (max-width: 768px) {
+    .header-content {
+        height: 82px;
+
+        .menu-element {
+            a {
+                font-size: 15px;
+            }
+        }
+
+        .logo {
+            .content {
+                width: 111px;
+                height: 111px;
+
+                svg {
+                    top: 9px;
+                    width: 69px;
+                    height: 82px;
+                }
+            }
+        }
+    }
+    //-----------------------------------------
+    #main {
+        .title {
+            .row-1 {
+                font-size: 34px;
+                line-height: 36px;
+            }
+
+            .row-2 {
+                font-size: 22px;
+                line-height: 23px;
+            }
+        }
+
+        .subtitle {
+            margin-bottom: 23%;
+
+            .about1 {
+                font-size: 23px;
+            }
+
+            .about2 {
+                font-size: 22px;
+            }
+        }
+    }
+
+    //-----------------------------------------
+    #features {
+        .features-in-text {
+            font-size: 16px;
+        }
+    }
+    //----------------------------------------
+    #pros-and-cons {
+        .futer-img img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .futer-content {
+            font-size: 15px;
+            text-align: center;
+            padding: 0 5px;
+        }
+
+        .tips_holder {
+            .tips {
+                font-size: 11px;
+
+                &:before {
+                    width: 21%;
+                }
+            }
+        }
+    }
+
+    .mobile-hide {
+        display: none;
+    }
+    //-----------------------------------------
+    .roundabout-holder {
+        width: 420px;
+        margin: 30px auto 30px !important;
+    }
+
+    #carousel li {
+        .carcas {
+            width: 340px;
+            height: 280px;
+
+            img {
+                height: 100%;
+                width: 100%;
+            }
+        }
+    }
+    //-----------------------------------------
+    #table {
+        .pop-up {
+            padding: 45px 5px;
+
+            .closebtn {
+                right: 5%;
+            }
+
+            table tbody td {
+                font-size: 15px;
+                white-space: nowrap;
+            }
+        }
+    }
+    //-----------------------------------------
+    #contact {
+        .contact-holder {
+            .contact-area {
+                .contact-info {
+                    p {
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+    //-----------------------------------------
+    footer {
+
+        .content {
+            font-size: 13px;
+        }
+
+        .footer-logo img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
+@media (min-width: 768px) and (max-width:992px) {
+    #main {
+
+        .subtitle {
+            margin-bottom: 16%;
+
+            .about1 {
+                font-size: 32px;
+            }
+
+            .about2 {
+                font-size: 19px;
+            }
+        }
+    }
+    //-----------------------------------------
+    #pros-and-cons {
+        .futer-img img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .futer-content {
+            font-size: 15px;
+        }
+
+        .tips_holder {
+            .tips {
+                font-size: 11px;
+
+                &:before {
+                    width: 21%;
+                }
+            }
+        }
+    }
+    //-----------------------------------------
+
+    .roundabout-holder {
+        width: 600px;
+    }
+
+    #carousel li {
+        .carcas {
+            width: 550px;
+            height: 375px;
+
+
+            img {
+                height: 100%;
+                width: 100%;
+            }
+        }
+    }
+    //-----------------------------------------
+    #table {
+        .pop-up {
+            padding: 45px 5px;
+        }
+    }
+    //-----------------------------------------
+    footer {
+
+        .content {
+            font-size: 16px;
+        }
+
+        .footer-logo img {
+            width: 100%;
+            height: 100%;
+        }
+
+        nav {
+            display: flex;
+            flex-flow: column wrap;
+
+            a {
+                text-align: right;
+                @include setFont(16px,400,white,"proxima-nova", sans-serif);
+                margin: 4px 0;
+
+                &:hover {
+                    color: aqua;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width:992px) and (max-width:1200px) {
+    //-----------------------------------------
+    #pros-and-cons {
+        .futer-img img {
+            width: 100%;
+            height: 100%;
+        }
+
+        futer-content {
+            font-size: 15px;
+        }
+
+        .tips_holder {
+            .tips {
+                font-size: 13px;
+            }
+        }
+    }
+    //-----------------------------------------
+    #table {
+        .pop-up {
+            padding: 45px 5px;
+        }
+    }
+    //-----------------------------------------
+    footer {
+        .footer-logo img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+    //-----------------------------------------
+    #main {
+        .subtitle {
+            text-align: center;
+            margin-bottom: 15%;
         }
     }
 }
