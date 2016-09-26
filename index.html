@@ -21,9 +21,11 @@
     <section id="header">
         <div class="container-fluid header-content">
             <div class="row">
-                <div class="menu-element"><a href="#features">Преимущества</a></div>
-                <div class="menu-element"><a href="#galery">Галерея</a></div>
-                <div class="logo wrapper">
+                <div class="menu-section">
+                    <div class="menu-element"><a href="#features">Преимущества</a></div>
+                    <div class="menu-element"><a href="#galery">Галерея</a></div>
+                </div>
+                <div class="logo wrapper" style="flex: 0;">
                     <div class="content">
                         <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                              viewBox="0 0 100 117" style="enable-background:new 0 0 100 117;" xml:space="preserve">
@@ -195,8 +197,10 @@
 </svg>
                     </div>
                 </div>
-                <div class="menu-element"><a href="#table">Продукция</a></div>
-                <div class="menu-element"><a href="#contact">Контакты</a></div>
+                <div class="menu-section">
+                    <div class="menu-element"><a href="#features">Преимущества</a></div>
+                    <div class="menu-element"><a href="#galery">Галерея</a></div>
+                </div>
             </div>
         </div>
         <div class="lang">
@@ -227,7 +231,7 @@
     <section id="features">
         <div class="container">
             <div class="row">
-                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                     <div class="row">
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                             <div class="features-in-text">
@@ -238,7 +242,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="row">
+                    <div class="row mobile-hide">
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                             <div class="features-img">
                                 <img src="img/features-img.png" width="711" height="229" />
@@ -246,7 +250,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                     <div class="features-tips">
                         <div class="tips-icon icon-1"></div>
                         <div class="tips-text">Повышенная на 70%  износостойкость</div>
@@ -273,7 +277,7 @@
     <section id="pros-and-cons">
         <div class="container">
             <div class="row">
-                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6" style="padding-right:0;">
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 border-r-b">
                     <div class="gluefuter">
                         <div class="title">Вклееная футеровка</div>
                         <div class="row">
@@ -302,7 +306,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6" style="padding-left:0;">
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 border-l-t">
                     <div class="monolitefuter">
                         <div class="title">Монолитная футеровка</div>
                         <div class="row">
@@ -406,7 +410,7 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padd-mob">
                     <div class="table_wrapper">
                         <table>
                             <thead>
@@ -506,7 +510,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                        <div class="btn">Физико-химические свойства ЛМТ</div>
+                        <div class="btn-pop">Физико-химические свойства ЛМТ</div>
                     </div>
                 </div>
             </div>
@@ -517,111 +521,223 @@
                     </div>
                     <div class="container">
                         <div class="row">
-                            <div class="table_wrapper">
-                                <table>
-                                    <thead>
-                                        <tr>
-                                            <td>№</td>
-                                            <td>Наименование</td>
-                                            <td>Ед. изм.</td>
-                                            <td>Показатель</td>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>1</td>
-                                            <td>Кислотностьне менее в H<sub>2</sub> SO<sub>4</sub></td>
-                                            <td>%</td>
-                                            <td>96,4</td>
-                                        </tr>
-                                        <tr>
-                                            <td>2</td>
-                                            <td>Кислотностьне менее в HCL</td>
-                                            <td>%</td>
-                                            <td>89,1</td>
-                                        </tr>
-                                        <tr>
-                                            <td>3</td>
-                                            <td>Предел прочности при сжатии</td>
-                                            <td>МПа</td>
-                                            <td>500-600</td>
-                                        </tr>
-                                        <tr>
-                                            <td>4</td>
-                                            <td>Предел прочности при изгибе</td>
-                                            <td>МПа</td>
-                                            <td>50-70</td>
-                                        </tr>
-                                        <tr>
-                                            <td>5</td>
-                                            <td>Модуль упругости</td>
-                                            <td>ГПа</td>
-                                            <td>350</td>
-                                        </tr>
-                                        <tr>
-                                            <td>6</td>
-                                            <td>Водопоглощение, не более</td>
-                                            <td>%</td>
-                                            <td>0,2</td>
-                                        </tr>
-                                        <tr>
-                                            <td>7</td>
-                                            <td>Удельный вес, не менее</td>
-                                            <td>кг/см<sup>3</sup></td>
-                                            <td>2,9</td>
-                                        </tr>
-                                        <tr>
-                                            <td>8</td>
-                                            <td>Ударная вязкость, не менее</td>
-                                            <td>кДж/м<sup>2</sup></td>
-                                            <td>50</td>
-                                        </tr>
-                                        <tr>
-                                            <td>9</td>
-                                            <td>Морозоустойчивость, не менее</td>
-                                            <td>циклов</td>
-                                            <td>100</td>
-                                        </tr>
-                                        <tr>
-                                            <td>10</td>
-                                            <td>Рабочая температура (термостойкость)</td>
-                                            <td>°C</td>
-                                            <td>600-900</td>
-                                        </tr>
-                                        <tr>
-                                            <td>11</td>
-                                            <td>Твердость, не менее</td>
-                                            <td>Моос</td>
-                                            <td>8+</td>
-                                        </tr>
-                                        <tr>
-                                            <td>12</td>
-                                            <td>КТР</td>
-                                            <td>град.<sup>-1</sup></td>
-                                            <td>6,3 – 6,8х10<sup>-6</sup></td>
-                                        </tr>
-                                        <tr>
-                                            <td>13</td>
-                                            <td>Удельное электрическое сопротивление</td>
-                                            <td>Ом . см<sup>2</sup></td>
-                                            <td>10<sup>14</sup></td>
-                                        </tr>
-                                        <tr>
-                                            <td>14</td>
-                                            <td>Температура плавления</td>
-                                            <td>°C</td>
-                                            <td>1350</td>
-                                        </tr>
-                                        <tr>
-                                            <td>15</td>
-                                            <td>Истираемость</td>
-                                            <td>г/ см<sup>2</sup></td>
-                                            <td>0,01-0,02</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                <div class="table_wrapper">
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <td>№</td>
+                                                <td>Наименование</td>
+                                                <td>Ед. изм.</td>
+                                                <td>Показатель</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>Кислотностьне менее в H<sub>2</sub> SO<sub>4</sub></td>
+                                                <td>%</td>
+                                                <td>96,4</td>
+                                            </tr>
+                                            <tr>
+                                                <td>2</td>
+                                                <td>Кислотностьне менее в HCL</td>
+                                                <td>%</td>
+                                                <td>89,1</td>
+                                            </tr>
+                                            <tr>
+                                                <td>3</td>
+                                                <td>Предел прочности при сжатии</td>
+                                                <td>МПа</td>
+                                                <td>500-600</td>
+                                            </tr>
+                                            <tr>
+                                                <td>4</td>
+                                                <td>Предел прочности при изгибе</td>
+                                                <td>МПа</td>
+                                                <td>50-70</td>
+                                            </tr>
+                                            <tr>
+                                                <td>5</td>
+                                                <td>Модуль упругости</td>
+                                                <td>ГПа</td>
+                                                <td>350</td>
+                                            </tr>
+                                            <tr>
+                                                <td>6</td>
+                                                <td>Водопоглощение, не более</td>
+                                                <td>%</td>
+                                                <td>0,2</td>
+                                            </tr>
+                                            <tr>
+                                                <td>7</td>
+                                                <td>Удельный вес, не менее</td>
+                                                <td>кг/см<sup>3</sup></td>
+                                                <td>2,9</td>
+                                            </tr>
+                                            <tr>
+                                                <td>8</td>
+                                                <td>Ударная вязкость, не менее</td>
+                                                <td>кДж/м<sup>2</sup></td>
+                                                <td>50</td>
+                                            </tr>
+                                            <tr>
+                                                <td>9</td>
+                                                <td>Морозоустойчивость, не менее</td>
+                                                <td>циклов</td>
+                                                <td>100</td>
+                                            </tr>
+                                            <tr>
+                                                <td>10</td>
+                                                <td>Рабочая температура (термостойкость)</td>
+                                                <td>°C</td>
+                                                <td>600-900</td>
+                                            </tr>
+                                            <tr>
+                                                <td>11</td>
+                                                <td>Твердость, не менее</td>
+                                                <td>Моос</td>
+                                                <td>8+</td>
+                                            </tr>
+                                            <tr>
+                                                <td>12</td>
+                                                <td>КТР</td>
+                                                <td>град.<sup>-1</sup></td>
+                                                <td>6,3 – 6,8х10<sup>-6</sup></td>
+                                            </tr>
+                                            <tr>
+                                                <td>13</td>
+                                                <td>Удельное электрическое сопротивление</td>
+                                                <td>Ом . см<sup>2</sup></td>
+                                                <td>10<sup>14</sup></td>
+                                            </tr>
+                                            <tr>
+                                                <td>14</td>
+                                                <td>Температура плавления</td>
+                                                <td>°C</td>
+                                                <td>1350</td>
+                                            </tr>
+                                            <tr>
+                                                <td>15</td>
+                                                <td>Истираемость</td>
+                                                <td>г/ см<sup>2</sup></td>
+                                                <td>0,01-0,02</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
                             </div>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container mobile-show" style="padding-top:15px;">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padd-mob">
+                    <div class="table_wrapper">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <td>№</td>
+                                    <td>Наименование</td>
+                                    <td>Ед. изм.</td>
+                                    <td>Показатель</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>Кислотностьне менее в H<sub>2</sub> SO<sub>4</sub></td>
+                                    <td>%</td>
+                                    <td>96,4</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>Кислотностьне менее в HCL</td>
+                                    <td>%</td>
+                                    <td>89,1</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>Предел прочности при сжатии</td>
+                                    <td>МПа</td>
+                                    <td>500-600</td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>Предел прочности при изгибе</td>
+                                    <td>МПа</td>
+                                    <td>50-70</td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td>Модуль упругости</td>
+                                    <td>ГПа</td>
+                                    <td>350</td>
+                                </tr>
+                                <tr>
+                                    <td>6</td>
+                                    <td>Водопоглощение, не более</td>
+                                    <td>%</td>
+                                    <td>0,2</td>
+                                </tr>
+                                <tr>
+                                    <td>7</td>
+                                    <td>Удельный вес, не менее</td>
+                                    <td>кг/см<sup>3</sup></td>
+                                    <td>2,9</td>
+                                </tr>
+                                <tr>
+                                    <td>8</td>
+                                    <td>Ударная вязкость, не менее</td>
+                                    <td>кДж/м<sup>2</sup></td>
+                                    <td>50</td>
+                                </tr>
+                                <tr>
+                                    <td>9</td>
+                                    <td>Морозоустойчивость, не менее</td>
+                                    <td>циклов</td>
+                                    <td>100</td>
+                                </tr>
+                                <tr>
+                                    <td>10</td>
+                                    <td>Рабочая температура (термостойкость)</td>
+                                    <td>°C</td>
+                                    <td>600-900</td>
+                                </tr>
+                                <tr>
+                                    <td>11</td>
+                                    <td>Твердость, не менее</td>
+                                    <td>Моос</td>
+                                    <td>8+</td>
+                                </tr>
+                                <tr>
+                                    <td>12</td>
+                                    <td>КТР</td>
+                                    <td>град.<sup>-1</sup></td>
+                                    <td>6,3 – 6,8х10<sup>-6</sup></td>
+                                </tr>
+                                <tr>
+                                    <td>13</td>
+                                    <td>Удельное электрическое сопротивление</td>
+                                    <td>Ом . см<sup>2</sup></td>
+                                    <td>10<sup>14</sup></td>
+                                </tr>
+                                <tr>
+                                    <td>14</td>
+                                    <td>Температура плавления</td>
+                                    <td>°C</td>
+                                    <td>1350</td>
+                                </tr>
+                                <tr>
+                                    <td>15</td>
+                                    <td>Истираемость</td>
+                                    <td>г/ см<sup>2</sup></td>
+                                    <td>0,01-0,02</td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
             </div>
@@ -681,51 +797,51 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <div class="contact-holder">
-                        <div class="contact-area background-1">
-                            <div class="label-contact">Производитель</div>
-                            <div class="contact-info">
-                                <p class="name">ООО «Днепровский футеровочный завод» <span style="font-weight:400">53221,</span></p>
-                                <p>Украина, Днепропетровская область,</p>
-                                <p>г. Никополь, ул.Героев Чернобыля, 102/2.</p>
-                                <p>Тел: +38(056)665-02-12; факс +38(056)622-30-15; +38(067)261-67-76</p>
-                                <p>E-mail: ooodfz.ua@gmail.com </p>
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 padding-remove">
+                            <div class="contact-area background-1">
+                                <div class="label-contact">Производитель</div>
+                                <div class="contact-info">
+                                    <p class="name">ООО «Днепровский футеровочный завод» <span style="font-weight:400">53221,</span></p>
+                                    <p>Украина, Днепропетровская область,</p>
+                                    <p>г. Никополь, ул.Героев Чернобыля, 102/2.</p>
+                                    <p>Тел: +38(056)665-02-12; факс +38(056)622-30-15; +38(067)261-67-76</p>
+                                    <p>E-mail: ooodfz.ua@gmail.com </p>
+                                </div>
                             </div>
                         </div>
-                        <div class="contact-area background-2">
-                            <div class="contact-info">
-                                <p class="name">Дилер по продаже продукции на территории РФ:<br />ООО «Совместное Российско Белорусское Предприятие Белметтранс»</p>
-                                <p>Российская Федерация, 241020,</p>
-                                <p>г. Брянск, проезд Московский,15</p>
-                                <p>Тел: +7(962)1333111</p>
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 padding-remove">
+                            <div class="contact-area background-2">
+                                <div class="contact-info">
+                                    <p class="name">Дилер по продаже продукции на территории РФ:<br />ООО «Совместное Российско Белорусское Предприятие Белметтранс»</p>
+                                    <p>Российская Федерация, 241020,</p>
+                                    <p>г. Брянск, проезд Московский,15</p>
+                                    <p>Тел: +7(962)1333111</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 padding-remove">
+                            <div class="contact-area background-3">
+                                <div class="label"></div>
+                                <div class="contact-info">
+                                    <p class="name">Дилер по продаже продукции в странах СНГ и дальнее зарубежье:<br />ООО «Ред Бокс» </p>
+                                    <p>Республика Беларусь 220035, </p>
+                                    <p>г. Минск, ул.Тимирязева, д. 67-503</p>
+                                    <p>Тел:+375(29) 6771105</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 padding-remove">
+                            <div class="contact-area background-4">
+                                <div class="contact-info">
+                                    <p class="name">Дилер по продаже продукции на территории Европейского союза:<br />DFZ POLSKA</p>
+                                    <p>UL. Galileusza 17, 80-299, Gdansk, Polska</p>
+                                    <p>TEL. +48 534 454 445</p>
+                                    <p style="text-transform:uppercase">e-mail: dfz.polska@gmail.com </p>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                    <div class="contact-holder">
-                        <div class="contact-area background-3">
-                            <div class="label"></div>
-                            <div class="contact-info">
-                                <p class="name">Дилер по продаже продукции в странах СНГ и дальнее зарубежье:<br />ООО «Ред Бокс» </p>
-                                <p>Республика Беларусь 220035, </p>
-                                <p>г. Минск, ул.Тимирязева, д. 67-503</p>
-                                <p>Тел:+375(29) 6771105</p>
-                            </div>
-                        </div>
-                        <div class="contact-area background-4">
-                            <div class="contact-info">
-                                <p class="name">Дилер по продаже продукции на территории Европейского союза:<br />DFZ POLSKA</p>
-                                <p>UL. Galileusza 17, 80-299, Gdansk, Polska</p>
-                                <p>TEL. +48 534 454 445</p>
-                                <p style="text-transform:uppercase">e-mail: dfz.polska@gmail.com </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
         <div class="container-fluid email-area">
@@ -738,20 +854,20 @@
     </section>
     <footer>
         <div class="container">
-            <div class="row" style="display: flex;    align-items: center;">
+            <div class="row">
                 <!-- in sm and xs area sum is not equal 12, cause of display flex properties -->
-                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-5">
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                     <div class="footer-logo">
                         <img src="img/logo-footer.png" width="315" height="94" />
                     </div>
                 </div>
-                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                     <div class="content">
                         Lorem ipsum dolor
                         sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
                     </div>
                 </div>
-                <div class="col-lg-2 col-md-2 col-sm-3 col-xs-4">
+                <div class="col-lg-2 col-md-2 col-sm-3 col-xs-12">
                     <nav>
                         <a href="#header">Главная</a>
                         <a href="#table">Продукция</a>
@@ -765,7 +881,6 @@
     </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script src="javascript/animation.js"></script>
     <script src="javascript/index.js"></script>
 </body>
 </html>

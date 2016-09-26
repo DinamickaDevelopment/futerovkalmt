@@ -33,7 +33,7 @@ var gallaryResize = function () {
 
 }
 // Pop-up logick
-$('.phisic-chemic .btn').bind('click', function () {
+$('.phisic-chemic .btn-pop').bind('click', function () {
     if ($('.pop-up').css('display') == "none") {
         $('.pop-up,.dark-layout').fadeIn(200);
     }
@@ -51,8 +51,6 @@ $('.header-content .menu-element a,footer nav a ').on('click', function (event) 
     }, 400);
 });
 
-
-new WOW().init();
 /**
  * jQuery Roundabout - v2.4.2
  * http://fredhq.com/projects/roundabout

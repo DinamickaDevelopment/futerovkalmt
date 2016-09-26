@@ -204,14 +204,21 @@ th {
     align-items: center;
     justify-content: space-around;
     width: 100%; }
-  .header-content .menu-element a {
-    font-size: 18px;
-    font-weight: 200;
-    font-family: "proxima-nova", sans-serif;
-    color: #2c3e50; }
-    .header-content .menu-element a:hover {
-      text-decoration: none;
-      color: #1c2833; }
+    .header-content .row > div {
+      width: 100%;
+      text-align: center; }
+  .header-content .menu-section {
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .header-content .menu-section .menu-element a {
+      font-size: 18px;
+      font-weight: 200;
+      font-family: "proxima-nova", sans-serif;
+      color: #2c3e50; }
+      .header-content .menu-section .menu-element a:hover {
+        text-decoration: none;
+        color: #1c2833; }
   .header-content .logo .content {
     display: flex;
     align-items: center;
@@ -234,6 +241,9 @@ th {
     box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2); }
     .header-content .logo:hover .content svg path {
       fill: #2491d3; }
+
+.mobile-show {
+  display: none; }
 
 #header {
   position: relative;
@@ -358,8 +368,13 @@ th {
       text-transform: uppercase;
       margin-left: 4%; }
 
+.border-r-b {
+  border-right: 2px solid #f45c43; }
+
+.border-l-t {
+  border-left: 2px solid #f45c43; }
+
 .gluefuter {
-  border-right: 2px solid #f45c43;
   padding-bottom: 40px; }
   .gluefuter .futer-content {
     text-align: right; }
@@ -376,8 +391,7 @@ th {
         left: 100%; }
 
 .monolitefuter {
-  padding-bottom: 40px;
-  border-left: 2px solid #f45c43; }
+  padding-bottom: 40px; }
   .monolitefuter .title {
     color: #2c3e50 !important; }
   .monolitefuter .futer-content {
@@ -555,15 +569,16 @@ th {
     width: 100%;
     height: 60px;
     background: #3498db; }
-    #table .phisic-chemic .btn {
+    #table .phisic-chemic .btn-pop {
       width: 320px;
+      text-align: center;
       border: 2px solid white;
       font-size: 16px;
       font-weight: 600;
       font-family: "proxima-nova", sans-serif;
       color: white;
       border-radius: 25px;
-      margin: 11px 0; }
+      margin: 17px 0; }
   #table .pop-up {
     position: fixed;
     top: 50%;
@@ -625,52 +640,51 @@ th {
   text-align: center;
   margin: 30px 0; }
 
-#contact .contact-holder {
+#contact .contact-holder .padding-remove {
+  padding: 0; }
+
+#contact .contact-holder .contact-area {
+  width: 100%;
+  height: 325px;
+  background-color: green;
   display: flex;
-  align-items: center;
-  justify-content: space-between; }
-  #contact .contact-holder .contact-area {
-    width: 100%;
-    height: 325px;
-    background-color: green;
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-    position: relative; }
-    #contact .contact-holder .contact-area .label-contact {
+  align-items: flex-end;
+  justify-content: center;
+  position: relative; }
+  #contact .contact-holder .contact-area .label-contact {
+    font-size: 16px;
+    font-weight: 600;
+    font-family: "proxima-nova", sans-serif;
+    color: white;
+    width: 145px;
+    height: 30px;
+    line-height: 30px;
+    background-color: #f45c43;
+    border-radius: 30px 0 0 30px;
+    position: absolute;
+    right: 0;
+    top: 5%;
+    text-align: center; }
+  #contact .contact-holder .contact-area .contact-info {
+    background-color: rgba(255, 255, 255, 0.85);
+    width: 100%; }
+    #contact .contact-holder .contact-area .contact-info p {
       font-size: 16px;
-      font-weight: 600;
-      font-family: "proxima-nova", sans-serif;
-      color: white;
-      width: 145px;
-      height: 30px;
-      line-height: 30px;
-      background-color: #f45c43;
-      border-radius: 30px 0 0 30px;
-      position: absolute;
-      right: 0;
-      top: 5%;
-      text-align: center; }
-    #contact .contact-holder .contact-area .contact-info {
-      background-color: rgba(255, 255, 255, 0.85);
-      width: 100%; }
-      #contact .contact-holder .contact-area .contact-info p {
-        font-size: 16px;
-        font-weight: 400;
-        font-family: "proxima-nova-condensed", sans-serif;
-        color: #2c3e50;
-        margin: 0;
-        text-align: right; }
-      #contact .contact-holder .contact-area .contact-info p.name {
-        font-weight: 600; }
-    #contact .contact-holder .contact-area.background-1 {
-      background-image: url("../img/contact-1.png"); }
-    #contact .contact-holder .contact-area.background-2 {
-      background-image: url("../img/contact-2.png"); }
-    #contact .contact-holder .contact-area.background-3 {
-      background-image: url("../img/contact-3.png"); }
-    #contact .contact-holder .contact-area.background-4 {
-      background-image: url("../img/contact-4.png"); }
+      font-weight: 400;
+      font-family: "proxima-nova-condensed", sans-serif;
+      color: #2c3e50;
+      margin: 0;
+      text-align: right; }
+    #contact .contact-holder .contact-area .contact-info p.name {
+      font-weight: 600; }
+  #contact .contact-holder .contact-area.background-1 {
+    background-image: url("../img/contact-1.png"); }
+  #contact .contact-holder .contact-area.background-2 {
+    background-image: url("../img/contact-2.png"); }
+  #contact .contact-holder .contact-area.background-3 {
+    background-image: url("../img/contact-3.png"); }
+  #contact .contact-holder .contact-area.background-4 {
+    background-image: url("../img/contact-4.png"); }
 
 #contact .email-area {
   background-color: #f45c43; }
@@ -686,6 +700,10 @@ th {
 footer {
   background-color: #343642;
   padding: 50px 0; }
+  footer .row {
+    display: flex;
+    align-items: center;
+    justify-content: center; }
   footer .content {
     font-size: 18px;
     font-weight: 400;
@@ -708,8 +726,14 @@ footer {
 @media (max-width: 768px) {
   .header-content {
     height: 82px; }
-    .header-content .menu-element a {
-      font-size: 15px; }
+    .header-content .row {
+      align-items: flex-end; }
+      .header-content .row .menu-section {
+        flex-wrap: wrap; }
+        .header-content .row .menu-section .menu-element {
+          margin-bottom: 15px; }
+          .header-content .row .menu-section .menu-element a {
+            font-size: 15px; }
     .header-content .logo .content {
       width: 111px;
       height: 111px; }
@@ -717,56 +741,85 @@ footer {
         top: 9px;
         width: 69px;
         height: 82px; }
-  #main .title .row-1 {
-    font-size: 34px;
-    line-height: 36px; }
-  #main .title .row-2 {
-    font-size: 22px;
-    line-height: 23px; }
+  #main .title {
+    margin: 23% 0px; }
+    #main .title .row-1 {
+      font-size: 34px;
+      line-height: 36px; }
+    #main .title .row-2 {
+      font-size: 22px;
+      line-height: 23px; }
   #main .subtitle {
-    margin-bottom: 23%; }
+    margin-bottom: 26%; }
     #main .subtitle .about1 {
       font-size: 23px; }
     #main .subtitle .about2 {
-      font-size: 22px; }
+      font-size: 19px; }
   #features .features-in-text {
-    font-size: 16px; }
-  #pros-and-cons .futer-img img {
-    width: 100%;
-    height: 100%; }
-  #pros-and-cons .futer-content {
-    font-size: 15px;
+    font-size: 16px;
     text-align: center;
-    padding: 0 5px; }
-  #pros-and-cons .tips_holder .tips {
-    font-size: 11px; }
-    #pros-and-cons .tips_holder .tips:before {
-      width: 21%; }
+    margin-bottom: 15px; }
+  #pros-and-cons {
+    background-image: linear-gradient(to bottom, #333542 0%, #333542 50%, #ecf0f1 50%, #ecf0f1 100%); }
+    #pros-and-cons .futer-img img {
+      width: 100%;
+      height: 100%; }
+    #pros-and-cons .futer-content {
+      font-size: 15px;
+      text-align: center;
+      padding: 0 5px; }
+    #pros-and-cons .tips_holder .tips {
+      font-size: 11px; }
+      #pros-and-cons .tips_holder .tips:before {
+        width: 21%; }
+    #pros-and-cons .border-r-b {
+      border-right: none;
+      border-bottom: 2px solid #f45c43; }
+    #pros-and-cons .border-l-t {
+      border-left: none;
+      border-top: 2px solid #f45c43; }
   .mobile-hide {
     display: none; }
+  .mobile-show {
+    display: block; }
+  .no-padd-mob {
+    padding: 0; }
   .roundabout-holder {
-    width: 420px;
+    width: 280px;
+    height: 380px;
     margin: 30px auto 30px !important; }
   #carousel li .carcas {
-    width: 340px;
-    height: 280px; }
+    width: 270px;
+    height: 210px; }
     #carousel li .carcas img {
       height: 100%;
       width: 100%; }
   #table .pop-up {
+    display: none !important;
     padding: 45px 5px; }
     #table .pop-up .closebtn {
       right: 5%; }
     #table .pop-up table tbody td {
-      font-size: 15px;
+      padding: 0 1px;
+      font-size: 14px;
       white-space: nowrap; }
+  #table .phisic-chemic .btn-pop {
+    width: 280px;
+    font-size: 15px; }
+  .dark-layout {
+    display: none !important; }
   #contact .contact-holder .contact-area .contact-info p {
     font-size: 14px; }
+  footer .row {
+    flex-flow: column wrap; }
   footer .content {
     font-size: 13px; }
   footer .footer-logo img {
     width: 100%;
-    height: 100%; } }
+    height: 100%; }
+  footer nav {
+    justify-content: center;
+    align-items: center; } }
 
 @media (min-width: 768px) and (max-width: 992px) {
   #main .subtitle {

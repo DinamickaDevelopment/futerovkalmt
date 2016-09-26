@@ -28,18 +28,30 @@ $text-color: #2c3e50;
     .row {
         @include display-flex(center,space-around);
         width: 100%;
+
+        & > div {
+            width: 100%;
+            text-align: center;
+        }
     }
 
-    .menu-element {
-        a {
-            @include setFont(18px,200,$text-color,"proxima-nova", sans-serif);
+    .menu-section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
-            &:hover {
-                text-decoration: none;
-                color: #1c2833;
+        .menu-element {
+            a {
+                @include setFont(18px,200,$text-color,"proxima-nova", sans-serif);
+
+                &:hover {
+                    text-decoration: none;
+                    color: #1c2833;
+                }
             }
         }
     }
+
 
     .logo {
         .content {
@@ -76,6 +88,10 @@ $text-color: #2c3e50;
             }
         }
     }
+}
+
+.mobile-show {
+    display: none;
 }
 
 #header {
@@ -213,8 +229,15 @@ $text-color: #2c3e50;
 }
 //video section
 //futerovka section
-.gluefuter {
+.border-r-b {
     border-right: 2px solid #f45c43;
+}
+
+.border-l-t {
+    border-left: 2px solid #f45c43;
+}
+
+.gluefuter {
     padding-bottom: 40px;
 
     .futer-content {
@@ -239,7 +262,6 @@ $text-color: #2c3e50;
 
 .monolitefuter {
     padding-bottom: 40px;
-    border-left: 2px solid #f45c43;
 
     .title {
         color: $text-color !important;
@@ -431,12 +453,13 @@ $text-color: #2c3e50;
         height: 60px;
         background: $general-color;
 
-        .btn {
+        .btn-pop {
             width: 320px;
+            text-align: center;
             border: 2px solid white;
             @include setFont(16px,600,white,"proxima-nova",sans-serif);
             border-radius: 25px;
-            margin: 11px 0;
+            margin: 17px 0;
         }
     }
 
@@ -506,7 +529,9 @@ $text-color: #2c3e50;
     }
 
     .contact-holder {
-        @include display-flex(center,space-between);
+        .padding-remove {
+            padding: 0;
+        }
 
         .contact-area {
             width: 100%;
@@ -567,6 +592,10 @@ footer {
     background-color: #343642;
     padding: 50px 0;
 
+    .row {
+        @include display-flex(center,center);
+    }
+
     .content {
         @include setFont(18px,400,White,"proxima-nova-condensed",sans-serif);
     }
@@ -592,11 +621,23 @@ footer {
     .header-content {
         height: 82px;
 
-        .menu-element {
-            a {
-                font-size: 15px;
+        .row {
+            align-items: flex-end;
+
+            .menu-section {
+                flex-wrap: wrap;
+
+                .menu-element {
+                    margin-bottom: 15px;
+
+                    a {
+                        font-size: 15px;
+                    }
+                }
             }
         }
+
+
 
         .logo {
             .content {
@@ -614,6 +655,8 @@ footer {
     //-----------------------------------------
     #main {
         .title {
+            margin: 23% 0px;
+
             .row-1 {
                 font-size: 34px;
                 line-height: 36px;
@@ -626,14 +669,14 @@ footer {
         }
 
         .subtitle {
-            margin-bottom: 23%;
+            margin-bottom: 26%;
 
             .about1 {
                 font-size: 23px;
             }
 
             .about2 {
-                font-size: 22px;
+                font-size: 19px;
             }
         }
     }
@@ -642,10 +685,14 @@ footer {
     #features {
         .features-in-text {
             font-size: 16px;
+            text-align: center;
+            margin-bottom: 15px;
         }
     }
     //----------------------------------------
     #pros-and-cons {
+        background-image: linear-gradient(to bottom, #333542 0%, #333542 50%, #ecf0f1 50%, #ecf0f1 100%);
+
         .futer-img img {
             width: 100%;
             height: 100%;
@@ -666,21 +713,40 @@ footer {
                 }
             }
         }
+
+        .border-r-b {
+            border-right: none;
+            border-bottom: 2px solid #f45c43;
+        }
+
+        .border-l-t {
+            border-left: none;
+            border-top: 2px solid #f45c43;
+        }
     }
 
     .mobile-hide {
         display: none;
     }
+
+    .mobile-show {
+        display: block;
+    }
+
+    .no-padd-mob {
+        padding: 0;
+    }
     //-----------------------------------------
     .roundabout-holder {
-        width: 420px;
+        width: 280px;
+        height:380px;
         margin: 30px auto 30px !important;
     }
 
     #carousel li {
         .carcas {
-            width: 340px;
-            height: 280px;
+            width: 270px;
+            height: 210px;
 
             img {
                 height: 100%;
@@ -691,6 +757,7 @@ footer {
     //-----------------------------------------
     #table {
         .pop-up {
+            display: none !important;
             padding: 45px 5px;
 
             .closebtn {
@@ -698,10 +765,22 @@ footer {
             }
 
             table tbody td {
-                font-size: 15px;
+                padding: 0 1px;
+                font-size: 14px;
                 white-space: nowrap;
             }
         }
+
+        .phisic-chemic {
+            .btn-pop {
+                width: 280px;
+                font-size: 15px;
+            }
+        }
+    }
+
+    .dark-layout {
+        display: none !important;
     }
     //-----------------------------------------
     #contact {
@@ -717,6 +796,9 @@ footer {
     }
     //-----------------------------------------
     footer {
+        .row {
+            flex-flow: column wrap;
+        }
 
         .content {
             font-size: 13px;
@@ -725,6 +807,11 @@ footer {
         .footer-logo img {
             width: 100%;
             height: 100%;
+        }
+
+        nav {
+            justify-content: center;
+            align-items: center;
         }
     }
 }
