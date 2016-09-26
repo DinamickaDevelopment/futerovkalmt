@@ -25,6 +25,10 @@ $text-color: #2c3e50;
     height: 130px;
     @include display-flex;
 
+    .burger-menu {
+        display: none;
+    }
+
     .row {
         @include display-flex(center,space-around);
         width: 100%;
@@ -62,6 +66,8 @@ $text-color: #2c3e50;
             background-color: $header-bg-color;
             box-shadow: 0px 5px 8px 0px rgba(0, 0, 0, 0.2);
             transition: box-shadow 0.2s linear;
+            position: relative;
+            z-index: 100;
 
             svg {
                 position: relative;
@@ -343,6 +349,7 @@ $text-color: #2c3e50;
         top: 50%;
         transform: translateY(-50%);
         z-index: 279;
+        cursor: pointer;
         transition: left 0.3s linear,right 0.3s linear;
         @include display-flex(center,center);
         @include setFont(40px,400,white,inherit)
@@ -357,7 +364,6 @@ $text-color: #2c3e50;
 }
 
 .roundabout-moveable-item {
-    cursor: pointer;
     display: block;
     @include display-flex(center,center);
     filter: blur(2px);
@@ -561,6 +567,7 @@ $text-color: #2c3e50;
                     @include setFont(16px,400,$text-color,"proxima-nova-condensed",sans-serif);
                     margin: 0;
                     text-align: right;
+                    padding-right: 5px;
                 }
 
                 p.name {
@@ -596,6 +603,11 @@ footer {
         @include display-flex(center,center);
     }
 
+    .footer-logo img {
+        margin: 0 auto;
+        display: block;
+    }
+
     .content {
         @include setFont(18px,400,White,"proxima-nova-condensed",sans-serif);
     }
@@ -618,12 +630,55 @@ footer {
 }
 //Adaptive section
 @media (max-width: 768px) {
+    #header {
+
+        .burger-menu {
+            position: absolute;
+            top: 50%;
+            left: 10%;
+            transform: translateY(-50%);
+            border: none;
+            background-color: transparent;
+            &:focus{
+                outline:none;
+            }
+            i {
+                font-size: 24px;
+                color: #9d9d9d;
+            }
+        }
+
+        .buger-elements-wrapper {
+            height: 0px;
+            overflow: hidden;
+            position: absolute;
+            background: #ecf0f1;
+            width: 100%;
+            padding-top: 15px;
+            transition: height 0.5s linear;
+
+            &.expanded {
+                height: 160px;
+            }
+
+            .burger-element a {
+                width: 100%;
+                display: block;
+                text-align: center;
+                margin: 10px 0;
+                font-size: 16px;
+                @include setFont(16px,200,$text-color,"proxima-nova", sans-serif)
+            }
+        }
+    }
+
     .header-content {
-        height: 82px;
+        height: 70px;
+
 
         .row {
             .menu-section {
-                flex-wrap: wrap;
+                display: none;
 
                 .menu-element {
                     a {
@@ -792,17 +847,24 @@ footer {
     }
     //-----------------------------------------
     footer {
+        padding: 50px 0 20px;
+
         .row {
             flex-flow: column wrap;
         }
 
         .content {
+            padding-bottom: 10px;
             font-size: 13px;
         }
 
-        .footer-logo img {
-            margin: 0 auto;
-            display: block;
+        .footer-logo {
+            padding-bottom: 10px;
+
+            img {
+                width: 100%;
+                height: 100%;
+            }
         }
 
         nav {

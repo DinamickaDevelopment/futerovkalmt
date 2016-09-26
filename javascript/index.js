@@ -43,6 +43,16 @@ $('.closebtn').bind('click', function () {
         $('.pop-up,.dark-layout').fadeOut(200);
     }
 });
+$(".burger-menu").bind('click', function () {
+    if (!$('.buger-elements-wrapper').hasClass('expanded')) {
+        $('.buger-elements-wrapper').addClass('expanded');
+    } else {
+        $('.buger-elements-wrapper').removeClass('expanded');
+    }
+});
+$('.burger-menu').bind('blur', function () {
+    $('.buger-elements-wrapper').removeClass('expanded');
+})
 //Smooth scroll to anchor
 $('.header-content .menu-element a,footer nav a ').on('click', function (event) {
     event.preventDefault();
