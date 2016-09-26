@@ -726,14 +726,10 @@ footer {
 @media (max-width: 768px) {
   .header-content {
     height: 82px; }
-    .header-content .row {
-      align-items: flex-end; }
-      .header-content .row .menu-section {
-        flex-wrap: wrap; }
-        .header-content .row .menu-section .menu-element {
-          margin-bottom: 15px; }
-          .header-content .row .menu-section .menu-element a {
-            font-size: 15px; }
+    .header-content .row .menu-section {
+      flex-wrap: wrap; }
+      .header-content .row .menu-section .menu-element a {
+        font-size: 15px; }
     .header-content .logo .content {
       width: 111px;
       height: 111px; }

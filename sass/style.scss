@@ -622,14 +622,10 @@ footer {
         height: 82px;
 
         .row {
-            align-items: flex-end;
-
             .menu-section {
                 flex-wrap: wrap;
 
                 .menu-element {
-                    margin-bottom: 15px;
-
                     a {
                         font-size: 15px;
                     }
