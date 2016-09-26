@@ -193,14 +193,47 @@ td,
 th {
   padding: 0; }
 
+#header .burger-menu {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  transform: translateY(-50%);
+  border: none;
+  background-color: transparent;
+  display: none; }
+  #header .burger-menu:focus {
+    outline: none; }
+  #header .burger-menu i {
+    font-size: 24px;
+    color: #9d9d9d; }
+
+#header .buger-elements-wrapper {
+  height: 0px;
+  overflow: hidden;
+  position: absolute;
+  background: #ecf0f1;
+  width: 100%;
+  padding-top: 15px;
+  transition: height 0.5s linear; }
+  #header .buger-elements-wrapper.expanded {
+    height: 160px; }
+  #header .buger-elements-wrapper .burger-element a {
+    width: 100%;
+    display: block;
+    text-align: center;
+    margin: 10px 0;
+    font-size: 16px;
+    font-size: 16px;
+    font-weight: 200;
+    font-family: "proxima-nova", sans-serif;
+    color: #2c3e50; }
+
 .header-content {
   background: #ecf0f1;
   height: 130px;
   display: flex;
   align-items: center;
   justify-content: center; }
-  .header-content .burger-menu {
-    display: none; }
   .header-content .row {
     display: flex;
     align-items: center;
@@ -733,37 +766,7 @@ footer {
 
 @media (max-width: 768px) {
   #header .burger-menu {
-    position: absolute;
-    top: 50%;
-    left: 10%;
-    transform: translateY(-50%);
-    border: none;
-    background-color: transparent; }
-    #header .burger-menu:focus {
-      outline: none; }
-    #header .burger-menu i {
-      font-size: 24px;
-      color: #9d9d9d; }
-  #header .buger-elements-wrapper {
-    height: 0px;
-    overflow: hidden;
-    position: absolute;
-    background: #ecf0f1;
-    width: 100%;
-    padding-top: 15px;
-    transition: height 0.5s linear; }
-    #header .buger-elements-wrapper.expanded {
-      height: 160px; }
-    #header .buger-elements-wrapper .burger-element a {
-      width: 100%;
-      display: block;
-      text-align: center;
-      margin: 10px 0;
-      font-size: 16px;
-      font-size: 16px;
-      font-weight: 200;
-      font-family: "proxima-nova", sans-serif;
-      color: #2c3e50; }
+    display: block; }
   .header-content {
     height: 70px; }
     .header-content .row .menu-section {

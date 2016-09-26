@@ -20,14 +20,53 @@ $text-color: #2c3e50;
     color: $color;
 }
 //Header section
+#header{
+
+        .burger-menu {
+            position: absolute;
+            top: 50%;
+            left: 10%;
+            transform: translateY(-50%);
+            border: none;
+            background-color: transparent;
+            display:none;
+            &:focus{
+                outline:none;
+            }
+            i {
+                font-size: 24px;
+                color: #9d9d9d;
+            }
+        }
+
+        .buger-elements-wrapper {
+            height: 0px;
+            overflow: hidden;
+            position: absolute;
+            background: #ecf0f1;
+            width: 100%;
+            padding-top: 15px;
+            transition: height 0.5s linear;
+
+            &.expanded {
+                height: 160px;
+            }
+
+            .burger-element a {
+                width: 100%;
+                display: block;
+                text-align: center;
+                margin: 10px 0;
+                font-size: 16px;
+                @include setFont(16px,200,$text-color,"proxima-nova", sans-serif)
+            }
+        }}
 .header-content {
     background: $header-bg-color;
     height: 130px;
     @include display-flex;
 
-    .burger-menu {
-        display: none;
-    }
+
 
     .row {
         @include display-flex(center,space-around);
@@ -633,42 +672,7 @@ footer {
     #header {
 
         .burger-menu {
-            position: absolute;
-            top: 50%;
-            left: 10%;
-            transform: translateY(-50%);
-            border: none;
-            background-color: transparent;
-            &:focus{
-                outline:none;
-            }
-            i {
-                font-size: 24px;
-                color: #9d9d9d;
-            }
-        }
-
-        .buger-elements-wrapper {
-            height: 0px;
-            overflow: hidden;
-            position: absolute;
-            background: #ecf0f1;
-            width: 100%;
-            padding-top: 15px;
-            transition: height 0.5s linear;
-
-            &.expanded {
-                height: 160px;
-            }
-
-            .burger-element a {
-                width: 100%;
-                display: block;
-                text-align: center;
-                margin: 10px 0;
-                font-size: 16px;
-                @include setFont(16px,200,$text-color,"proxima-nova", sans-serif)
-            }
+            display:block;
         }
     }
 
