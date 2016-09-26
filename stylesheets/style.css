@@ -209,7 +209,7 @@ th {
       text-align: center; }
   .header-content .menu-section {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center; }
     .header-content .menu-section .menu-element a {
       font-size: 18px;
@@ -384,8 +384,7 @@ th {
     align-items: center;
     justify-content: flex-end; }
     .gluefuter .tips_holder .tips {
-      background-color: #f45c43;
-      margin-right: 17px; }
+      background-color: #f45c43; }
       .gluefuter .tips_holder .tips:before {
         background-color: #f45c43;
         left: 100%; }
@@ -402,8 +401,7 @@ th {
     align-items: center;
     justify-content: flex-start; }
     .monolitefuter .tips_holder .tips {
-      background-color: #3498db;
-      margin-left: 17px; }
+      background-color: #3498db; }
       .monolitefuter .tips_holder .tips:before {
         background-color: #f45c43;
         right: 100%; }
@@ -578,7 +576,7 @@ th {
       font-family: "proxima-nova", sans-serif;
       color: white;
       border-radius: 25px;
-      margin: 17px 0; }
+      margin: 17px auto; }
   #table .pop-up {
     position: fixed;
     top: 50%;
@@ -650,7 +648,9 @@ th {
   display: flex;
   align-items: flex-end;
   justify-content: center;
-  position: relative; }
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: cover; }
   #contact .contact-holder .contact-area .label-contact {
     font-size: 16px;
     font-weight: 600;
@@ -815,8 +815,8 @@ footer {
   footer .content {
     font-size: 13px; }
   footer .footer-logo img {
-    width: 100%;
-    height: 100%; }
+    margin: 0 auto;
+    display: block; }
   footer nav {
     justify-content: center;
     align-items: center; } }
@@ -836,7 +836,7 @@ footer {
   #pros-and-cons .tips_holder .tips {
     font-size: 11px; }
     #pros-and-cons .tips_holder .tips:before {
-      width: 21%; }
+      width: 20%; }
   .roundabout-holder {
     width: 600px; }
   #carousel li .carcas {

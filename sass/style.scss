@@ -37,7 +37,7 @@ $text-color: #2c3e50;
 
     .menu-section {
         display: flex;
-        justify-content: center;
+        justify-content: space-around;
         align-items: center;
 
         .menu-element {
@@ -250,7 +250,6 @@ $text-color: #2c3e50;
 
         .tips {
             background-color: #f45c43;
-            margin-right: 17px;
 
             &:before {
                 background-color: #f45c43;
@@ -277,7 +276,6 @@ $text-color: #2c3e50;
 
         .tips {
             background-color: $general-color;
-            margin-left: 17px;
 
             &:before {
                 background-color: #f45c43;
@@ -459,7 +457,7 @@ $text-color: #2c3e50;
             border: 2px solid white;
             @include setFont(16px,600,white,"proxima-nova",sans-serif);
             border-radius: 25px;
-            margin: 17px 0;
+            margin: 17px auto;
         }
     }
 
@@ -539,6 +537,8 @@ $text-color: #2c3e50;
             background-color: green;
             @include display-flex(flex-end,center);
             position: relative;
+            background-repeat: no-repeat;
+            background-size: cover;
 
             .label-contact {
                 @include setFont(16px,600,white,"proxima-nova", sans-serif);
@@ -739,7 +739,7 @@ footer {
     //-----------------------------------------
     .roundabout-holder {
         width: 280px;
-        height:380px;
+        height: 380px;
         margin: 30px auto 30px !important;
     }
 
@@ -805,8 +805,8 @@ footer {
         }
 
         .footer-logo img {
-            width: 100%;
-            height: 100%;
+            margin: 0 auto;
+            display: block;
         }
 
         nav {
@@ -847,7 +847,7 @@ footer {
                 font-size: 11px;
 
                 &:before {
-                    width: 21%;
+                    width: 20%;
                 }
             }
         }
