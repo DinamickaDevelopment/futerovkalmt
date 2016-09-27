@@ -378,25 +378,26 @@ th {
     margin-bottom: 10%;
     cursor: pointer; }
     #features .features-tips .tips-icon {
-      width: 40px;
-      height: 50px;
-      flex-shrink: 0; }
+      width: 49px;
+      height: 56px;
+      flex-shrink: 0;
+      background-image: url("../img/icon-spirte.png"); }
       #features .features-tips .tips-icon.icon-1 {
-        background-color: green; }
+        background-position: 49px 56px; }
       #features .features-tips .tips-icon.icon-2 {
-        background-color: green; }
+        background-position: 98px 56px; }
       #features .features-tips .tips-icon.icon-3 {
-        background-color: green; }
+        background-position: 147px 56px; }
       #features .features-tips .tips-icon.icon-4 {
-        background-color: green; }
+        background-position: 196px 56px; }
     #features .features-tips:hover .tips-icon.icon-1 {
-      background-color: red; }
+      background-position: 49px 112px; }
     #features .features-tips:hover .tips-icon.icon-2 {
-      background-color: red; }
+      background-position: 98px 112px; }
     #features .features-tips:hover .tips-icon.icon-3 {
-      background-color: red; }
+      background-position: 147px 112px; }
     #features .features-tips:hover .tips-icon.icon-4 {
-      background-color: red; }
+      background-position: 196px 112px; }
     #features .features-tips .tips-text {
       font-size: 16px;
       font-weight: 200;
@@ -524,9 +525,14 @@ th {
   justify-content: center;
   filter: blur(2px);
   transition: filter 0.2s linear; }
+  .roundabout-moveable-item span {
+    opacity: 0;
+    transition: opacity 0.2s linear; }
 
 .next-slide {
   filter: blur(0); }
+  .next-slide span {
+    opacity: 1; }
 
 .roundabout-moveable-item:before {
   content: '\A';
@@ -606,6 +612,8 @@ th {
     background: #3498db; }
     #table .phisic-chemic .btn-pop {
       width: 320px;
+      height: 30px;
+      line-height: 30px;
       text-align: center;
       border: 2px solid white;
       font-size: 16px;
@@ -704,15 +712,15 @@ th {
     text-align: center; }
   #contact .contact-holder .contact-area .contact-info {
     background-color: rgba(255, 255, 255, 0.85);
-    width: 100%; }
+    width: 100%;
+    padding: 15px 30px 15px 0; }
     #contact .contact-holder .contact-area .contact-info p {
       font-size: 16px;
       font-weight: 400;
       font-family: "proxima-nova-condensed", sans-serif;
       color: #2c3e50;
       margin: 0;
-      text-align: right;
-      padding-right: 5px; }
+      text-align: right; }
     #contact .contact-holder .contact-area .contact-info p.name {
       font-weight: 600; }
   #contact .contact-holder .contact-area.background-1 {
@@ -750,6 +758,13 @@ footer {
     font-weight: 400;
     font-family: "proxima-nova-condensed", sans-serif;
     color: White; }
+    footer .content .title {
+      font-size: 18px;
+      font-weight: 200;
+      font-family: sans-serif;
+      color: white "proxima-nova";
+      width: 100%;
+      display: block; }
   footer nav {
     display: flex;
     flex-flow: column wrap; }
@@ -761,7 +776,7 @@ footer {
       color: white;
       margin: 4px 0; }
       footer nav a:hover {
-        color: aqua;
+        color: #f45c43;
         text-decoration: none; }
 
 @media (max-width: 768px) {

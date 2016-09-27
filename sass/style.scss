@@ -246,13 +246,13 @@ $text-color: #2c3e50;
         cursor: pointer;
 
         .tips-icon {
-            width: 40px;
-            height: 50px;
+            width: 49px;
+            height: 56px;
             flex-shrink: 0;
-
+            background-image: url('../img/icon-spirte.png');
             @for $i from 1 through 4 {
                 &.icon-#{$i} {
-                    background-color: green;
+                    background-position:$i * 49px 56px;
                 }
             }
         }
@@ -260,7 +260,7 @@ $text-color: #2c3e50;
         &:hover .tips-icon {
             @for $i from 1 through 4 {
                 &.icon-#{$i} {
-                    background-color: red;
+                    background-position:$i * 49px 112px;
                 }
             }
         }
@@ -407,10 +407,17 @@ $text-color: #2c3e50;
     @include display-flex(center,center);
     filter: blur(2px);
     transition: filter 0.2s linear;
+    span{
+        opacity:0;
+        transition:opacity 0.2s linear;
+    }
 }
 
 .next-slide {
     filter: blur(0);
+    span{
+        opacity:1;
+    }
 }
 
 .roundabout-moveable-item:before {
@@ -498,6 +505,8 @@ $text-color: #2c3e50;
 
         .btn-pop {
             width: 320px;
+            height:30px;
+            line-height:30px;
             text-align: center;
             border: 2px solid white;
             @include setFont(16px,600,white,"proxima-nova",sans-serif);
@@ -601,12 +610,12 @@ $text-color: #2c3e50;
             .contact-info {
                 background-color: rgba(255,255,255,0.85);
                 width: 100%;
-
+                padding:15px 30px 15px 0;
                 p {
                     @include setFont(16px,400,$text-color,"proxima-nova-condensed",sans-serif);
                     margin: 0;
                     text-align: right;
-                    padding-right: 5px;
+                    
                 }
 
                 p.name {
@@ -649,6 +658,11 @@ footer {
 
     .content {
         @include setFont(18px,400,White,"proxima-nova-condensed",sans-serif);
+        .title{
+        @include setFont(18px,200,white"proxima-nova",sans-serif);
+        width:100%;
+        display:block;
+        }
     }
 
     nav {
@@ -661,7 +675,7 @@ footer {
             margin: 4px 0;
 
             &:hover {
-                color: aqua;
+                color:  #f45c43;
                 text-decoration: none;
             }
         }
