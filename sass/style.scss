@@ -506,9 +506,10 @@ $text-color: #2c3e50;
         .btn-pop {
             width: 320px;
             height:30px;
-            line-height:30px;
+            line-height:27px;
             text-align: center;
             border: 2px solid white;
+            cursor:pointer;
             @include setFont(16px,600,white,"proxima-nova",sans-serif);
             border-radius: 25px;
             margin: 17px auto;
@@ -681,6 +682,11 @@ footer {
         }
     }
 }
+    .copyright{
+        @include setFont(14px, 400,$text-color,"proxima-nova", sans-serif);
+        padding:10px 0px 10px 15px;
+        
+    }
 //Adaptive section
 @media (max-width: 768px) {
     #header {
