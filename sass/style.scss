@@ -20,47 +20,51 @@ $text-color: #2c3e50;
     color: $color;
 }
 //Header section
-#header{
+#header {
 
-        .burger-menu {
-            position: absolute;
-            top: 50%;
-            left: 10%;
-            transform: translateY(-50%);
-            border: none;
-            background-color: transparent;
-            display:none;
-            &:focus{
-                outline:none;
-            }
-            i {
-                font-size: 24px;
-                color: #9d9d9d;
-            }
+    .burger-menu {
+        position: absolute;
+        top: 50%;
+        left: 10%;
+        transform: translateY(-50%);
+        border: none;
+        background-color: transparent;
+        display: none;
+
+        &:focus {
+            outline: none;
         }
 
-        .buger-elements-wrapper {
-            height: 0px;
-            overflow: hidden;
-            position: absolute;
-            background: #ecf0f1;
+        i {
+            font-size: 24px;
+            color: #9d9d9d;
+        }
+    }
+
+    .buger-elements-wrapper {
+        height: 0px;
+        overflow: hidden;
+        position: absolute;
+        background: #ecf0f1;
+        width: 100%;
+        padding-top: 15px;
+        transition: height 0.5s linear;
+
+        &.expanded {
+            height: 160px;
+        }
+
+        .burger-element a {
             width: 100%;
-            padding-top: 15px;
-            transition: height 0.5s linear;
+            display: block;
+            text-align: center;
+            margin: 10px 0;
+            font-size: 16px;
+            @include setFont(16px,200,$text-color,"proxima-nova", sans-serif)
+        }
+    }
+}
 
-            &.expanded {
-                height: 160px;
-            }
-
-            .burger-element a {
-                width: 100%;
-                display: block;
-                text-align: center;
-                margin: 10px 0;
-                font-size: 16px;
-                @include setFont(16px,200,$text-color,"proxima-nova", sans-serif)
-            }
-        }}
 .header-content {
     background: $header-bg-color;
     height: 130px;
@@ -230,6 +234,14 @@ $text-color: #2c3e50;
 #features {
     padding: 30px 0;
 
+    .title {
+        @include setFont(26px,100,$general-color,"proxima-nova", sans-serif);
+        letter-spacing: 0.025em;
+        text-align: center;
+        padding-top: 22px;
+        margin-bottom: 30px;
+    }
+
     .features-in-text {
         @include setFont(18px,400,$text-color,"proxima-nova-condensed",sans-serif);
         text-align: right;
@@ -250,9 +262,10 @@ $text-color: #2c3e50;
             height: 56px;
             flex-shrink: 0;
             background-image: url('../img/icon-spirte.png');
+
             @for $i from 1 through 4 {
                 &.icon-#{$i} {
-                    background-position:$i * 49px 56px;
+                    background-position: $i * 49px 56px;
                 }
             }
         }
@@ -260,7 +273,7 @@ $text-color: #2c3e50;
         &:hover .tips-icon {
             @for $i from 1 through 4 {
                 &.icon-#{$i} {
-                    background-position:$i * 49px 112px;
+                    background-position: $i * 49px 112px;
                 }
             }
         }
@@ -269,6 +282,27 @@ $text-color: #2c3e50;
             @include setFont(16px,200,$text-color,"proxima-nova", sans-serif);
             text-transform: uppercase;
             margin-left: 4%;
+        }
+
+        .tips-pop-up {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            padding: 45px;
+            z-index: 9999;
+            background-color: white;
+            box-shadow: 0px 0px 9px 2px #000000;
+            display: none;
+            @include setFont(16px,400,$text-color,"proxima-nova", sans-serif);
+
+            .closebtn {
+                position: absolute;
+                top: 2%;
+                right: 3%;
+                @include setFont(24px, 400, $text-color,inherit);
+                cursor: pointer;
+            }
         }
     }
 }
@@ -283,7 +317,14 @@ $text-color: #2c3e50;
 }
 
 .gluefuter {
-    padding-bottom: 40px;
+
+    .title {
+        color: $text-color !important;
+    }
+
+    .futer-content {
+        color: $text-color !important;
+    }
 
     .futer-content {
         text-align: right;
@@ -305,16 +346,8 @@ $text-color: #2c3e50;
 }
 
 .monolitefuter {
-    padding-bottom: 40px;
+    padding-bottom: 24px;
 
-    .title {
-        color: $text-color !important;
-    }
-
-    .futer-content {
-        text-align: left;
-        color: $text-color !important;
-    }
 
     .tips_holder {
         @include display-flex(center, flex-start);
@@ -331,7 +364,7 @@ $text-color: #2c3e50;
 }
 
 #pros-and-cons {
-    background-image: linear-gradient(to right, rgba(51,53,66,1) 0%, rgba(51,53,66,1) 50%, rgba(236,240,241,1) 50%, rgba(236,240,241,1) 100%);
+    background-image: linear-gradient(to right, rgba(236,240,241,1) 0%, rgba(236,240,241,1) 50%, rgba(51,53,66,1) 50%, rgba(51,53,66,1) 100%);
 
     .title {
         @include setFont(26px,100,white,"proxima-nova", sans-serif);
@@ -345,26 +378,59 @@ $text-color: #2c3e50;
         @include setFont(16px,400,white,"proxima-nova-condensed",sans-serif);
     }
 
+    .futer-img button {
+        background: none;
+        border: none;
+        outline: none;
+    }
+
+    .futer-img button:focus + .futer-pop-up {
+        display: block;
+    }
+
+    .futer-pop-up {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        padding: 45px;
+        z-index: 9999;
+        background-color: white;
+        box-shadow: 0px 0px 9px 2px #000000;
+        display: none;
+        @include setFont(16px,400,$text-color,"proxima-nova", sans-serif);
+
+        .closebtn {
+            position: absolute;
+            top: 2%;
+            right: 3%;
+            @include setFont(24px, 400, $text-color,inherit);
+            cursor: pointer;
+        }
+    }
+
     .tips_holder {
         flex-wrap: wrap;
 
         .tips {
             width: 100%;
-            height: 30px;
+            height: 50px;
             margin-bottom: 50%;
             position: relative;
+            padding: 0 5px;
             @include display-flex(center,center);
-            @include setFont(16px,400,white,"proxima-nova", sans-serif);
+            @include setFont(15px,400,white,"proxima-nova", sans-serif);
 
             &:before {
                 content: '';
-                width: 12%;
+                width: 11%;
                 height: 2px;
                 position: absolute;
             }
         }
     }
 }
+
 //galery section
 #galery {
     position: relative;
@@ -407,16 +473,18 @@ $text-color: #2c3e50;
     @include display-flex(center,center);
     filter: blur(2px);
     transition: filter 0.2s linear;
-    span{
-        opacity:0;
-        transition:opacity 0.2s linear;
+
+    span {
+        opacity: 0;
+        transition: opacity 0.2s linear;
     }
 }
 
 .next-slide {
     filter: blur(0);
-    span{
-        opacity:1;
+
+    span {
+        opacity: 1;
     }
 }
 
@@ -505,11 +573,11 @@ $text-color: #2c3e50;
 
         .btn-pop {
             width: 320px;
-            height:30px;
-            line-height:27px;
+            height: 30px;
+            line-height: 27px;
             text-align: center;
             border: 2px solid white;
-            cursor:pointer;
+            cursor: pointer;
             @include setFont(16px,600,white,"proxima-nova",sans-serif);
             border-radius: 25px;
             margin: 17px auto;
@@ -572,6 +640,55 @@ $text-color: #2c3e50;
             margin: 5px;
         }
     }
+
+    .pop-upLogic button {
+        background: none;
+        border: none;
+        outline: none;
+    }
+
+    .pop-upLogic button:focus + .refer-pop-up {
+        display: block;
+    }
+
+    .refer-pop-up {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        padding: 45px;
+        z-index: 9999;
+        background-color: white;
+        box-shadow: 0px 0px 9px 2px #000000;
+        display: none;
+        @include setFont(16px,400,$text-color,"proxima-nova", sans-serif);
+
+        .closebtn {
+            position: absolute;
+            top: 2%;
+            right: 3%;
+            @include setFont(24px, 400, $text-color,inherit);
+            cursor: pointer;
+        }
+    }
+}
+//Our parthners
+#parthners{
+        .title {
+        @include setFont(46px,100,$text-color,"proxima-nova", sans-serif);
+        text-align: center;
+        margin: 30px 0;
+    }
+    .row{
+        @include display-flex(center,center);
+        .img-holder{
+            width:100%;
+            img{
+                width:100%;
+                height:100%;
+            }
+        }
+    }
 }
 //contact section
 #contact {
@@ -611,12 +728,12 @@ $text-color: #2c3e50;
             .contact-info {
                 background-color: rgba(255,255,255,0.85);
                 width: 100%;
-                padding:15px 30px 15px 0;
+                padding: 15px 30px 15px 0;
+
                 p {
                     @include setFont(16px,400,$text-color,"proxima-nova-condensed",sans-serif);
                     margin: 0;
                     text-align: right;
-                    
                 }
 
                 p.name {
@@ -659,10 +776,11 @@ footer {
 
     .content {
         @include setFont(18px,400,White,"proxima-nova-condensed",sans-serif);
-        .title{
-        @include setFont(18px,200,white"proxima-nova",sans-serif);
-        width:100%;
-        display:block;
+
+        .title {
+            @include setFont(18px,200,white"proxima-nova",sans-serif);
+            width: 100%;
+            display: block;
         }
     }
 
@@ -676,23 +794,23 @@ footer {
             margin: 4px 0;
 
             &:hover {
-                color:  #f45c43;
+                color: #f45c43;
                 text-decoration: none;
             }
         }
     }
 }
-    .copyright{
-        @include setFont(14px, 400,$text-color,"proxima-nova", sans-serif);
-        padding:10px 0px 10px 15px;
-        
-    }
+
+.copyright {
+    @include setFont(14px, 400,$text-color,"proxima-nova", sans-serif);
+    padding: 10px 0px 10px 15px;
+}
 //Adaptive section
 @media (max-width: 768px) {
     #header {
 
         .burger-menu {
-            display:block;
+            display: block;
         }
     }
 

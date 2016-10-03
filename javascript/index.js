@@ -38,11 +38,23 @@ $('.phisic-chemic .btn-pop').bind('click', function () {
         $('.pop-up,.dark-layout').fadeIn(200);
     }
 })
-$('.closebtn').bind('click', function () {
+$('.pop-up .closebtn').bind('click', function () {
     if ($('.pop-up').css('display') == "block") {
         $('.pop-up,.dark-layout').fadeOut(200);
     }
 });
+//------------------------------------------------------
+$(".features-tips").bind("click", function () {
+    if ($(this).children('.tips-pop-up').css('display') == "none") {
+        $(this).children('.tips-pop-up').fadeIn(200);
+        $('.dark-layout').fadeIn(200);
+    }
+})
+$('.tips-pop-up .closebtn').bind('click', function () {
+    $('.dark-layout').fadeOut(200);
+    $(this).parent().fadeOut(200);
+});
+//-------Pop-up logick------end--------------------------------------
 $(".burger-menu").bind('click', function () {
     if (!$('.buger-elements-wrapper').hasClass('expanded')) {
         $('.buger-elements-wrapper').addClass('expanded');
@@ -60,6 +72,19 @@ $('.header-content .menu-element a,footer nav a ').on('click', function (event) 
         scrollTop: $($.attr(this, 'href')).offset().top
     }, 400);
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /**
  * jQuery Roundabout - v2.4.2

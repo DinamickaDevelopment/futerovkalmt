@@ -360,6 +360,15 @@ th {
 
 #features {
   padding: 30px 0; }
+  #features .title {
+    font-size: 26px;
+    font-weight: 100;
+    font-family: "proxima-nova", sans-serif;
+    color: #3498db;
+    letter-spacing: 0.025em;
+    text-align: center;
+    padding-top: 22px;
+    margin-bottom: 30px; }
   #features .features-in-text {
     font-size: 18px;
     font-weight: 400;
@@ -405,6 +414,29 @@ th {
       color: #2c3e50;
       text-transform: uppercase;
       margin-left: 4%; }
+    #features .features-tips .tips-pop-up {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      padding: 45px;
+      z-index: 9999;
+      background-color: white;
+      box-shadow: 0px 0px 9px 2px #000000;
+      display: none;
+      font-size: 16px;
+      font-weight: 400;
+      font-family: "proxima-nova", sans-serif;
+      color: #2c3e50; }
+      #features .features-tips .tips-pop-up .closebtn {
+        position: absolute;
+        top: 2%;
+        right: 3%;
+        font-size: 24px;
+        font-weight: 400;
+        font-family: inherit;
+        color: #2c3e50;
+        cursor: pointer; }
 
 .border-r-b {
   border-right: 2px solid #f45c43; }
@@ -412,28 +444,28 @@ th {
 .border-l-t {
   border-left: 2px solid #f45c43; }
 
-.gluefuter {
-  padding-bottom: 40px; }
-  .gluefuter .futer-content {
-    text-align: right; }
-  .gluefuter .tips_holder {
-    padding-top: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end; }
-    .gluefuter .tips_holder .tips {
-      background-color: #f45c43; }
-      .gluefuter .tips_holder .tips:before {
-        background-color: #f45c43;
-        left: 100%; }
+.gluefuter .title {
+  color: #2c3e50 !important; }
+
+.gluefuter .futer-content {
+  color: #2c3e50 !important; }
+
+.gluefuter .futer-content {
+  text-align: right; }
+
+.gluefuter .tips_holder {
+  padding-top: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end; }
+  .gluefuter .tips_holder .tips {
+    background-color: #f45c43; }
+    .gluefuter .tips_holder .tips:before {
+      background-color: #f45c43;
+      left: 100%; }
 
 .monolitefuter {
-  padding-bottom: 40px; }
-  .monolitefuter .title {
-    color: #2c3e50 !important; }
-  .monolitefuter .futer-content {
-    text-align: left;
-    color: #2c3e50 !important; }
+  padding-bottom: 24px; }
   .monolitefuter .tips_holder {
     display: flex;
     align-items: center;
@@ -445,7 +477,7 @@ th {
         right: 100%; }
 
 #pros-and-cons {
-  background-image: linear-gradient(to right, #333542 0%, #333542 50%, #ecf0f1 50%, #ecf0f1 100%); }
+  background-image: linear-gradient(to right, #ecf0f1 0%, #ecf0f1 50%, #333542 50%, #333542 100%); }
   #pros-and-cons .title {
     font-size: 26px;
     font-weight: 100;
@@ -460,23 +492,53 @@ th {
     font-weight: 400;
     font-family: "proxima-nova-condensed", sans-serif;
     color: white; }
+  #pros-and-cons .futer-img button {
+    background: none;
+    border: none;
+    outline: none; }
+  #pros-and-cons .futer-img button:focus + .futer-pop-up {
+    display: block; }
+  #pros-and-cons .futer-pop-up {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 45px;
+    z-index: 9999;
+    background-color: white;
+    box-shadow: 0px 0px 9px 2px #000000;
+    display: none;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: "proxima-nova", sans-serif;
+    color: #2c3e50; }
+    #pros-and-cons .futer-pop-up .closebtn {
+      position: absolute;
+      top: 2%;
+      right: 3%;
+      font-size: 24px;
+      font-weight: 400;
+      font-family: inherit;
+      color: #2c3e50;
+      cursor: pointer; }
   #pros-and-cons .tips_holder {
     flex-wrap: wrap; }
     #pros-and-cons .tips_holder .tips {
       width: 100%;
-      height: 30px;
+      height: 50px;
       margin-bottom: 50%;
       position: relative;
+      padding: 0 5px;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 16px;
+      font-size: 15px;
       font-weight: 400;
       font-family: "proxima-nova", sans-serif;
       color: white; }
       #pros-and-cons .tips_holder .tips:before {
         content: '';
-        width: 12%;
+        width: 11%;
         height: 2px;
         position: absolute; }
 
@@ -675,6 +737,56 @@ th {
   flex-wrap: wrap; }
   #references .cards-holder .card {
     margin: 5px; }
+
+#references .pop-upLogic button {
+  background: none;
+  border: none;
+  outline: none; }
+
+#references .pop-upLogic button:focus + .refer-pop-up {
+  display: block; }
+
+#references .refer-pop-up {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 45px;
+  z-index: 9999;
+  background-color: white;
+  box-shadow: 0px 0px 9px 2px #000000;
+  display: none;
+  font-size: 16px;
+  font-weight: 400;
+  font-family: "proxima-nova", sans-serif;
+  color: #2c3e50; }
+  #references .refer-pop-up .closebtn {
+    position: absolute;
+    top: 2%;
+    right: 3%;
+    font-size: 24px;
+    font-weight: 400;
+    font-family: inherit;
+    color: #2c3e50;
+    cursor: pointer; }
+
+#parthners .title {
+  font-size: 46px;
+  font-weight: 100;
+  font-family: "proxima-nova", sans-serif;
+  color: #2c3e50;
+  text-align: center;
+  margin: 30px 0; }
+
+#parthners .row {
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  #parthners .row .img-holder {
+    width: 100%; }
+    #parthners .row .img-holder img {
+      width: 100%;
+      height: 100%; }
 
 #contact .title {
   font-size: 46px;
