@@ -216,7 +216,7 @@ th {
   padding-top: 15px;
   transition: height 0.5s linear; }
   #header .buger-elements-wrapper.expanded {
-    height: 160px; }
+    height: 220px; }
   #header .buger-elements-wrapper .burger-element a {
     width: 100%;
     display: block;
@@ -283,8 +283,9 @@ th {
   display: none; }
 
 #header {
-  position: relative;
-  z-index: 999; }
+  position: fixed;
+  z-index: 999;
+  width: 100%; }
   #header .lang {
     position: absolute;
     top: 5%;
@@ -310,7 +311,8 @@ th {
   background-image: url("../img/main-bg.png");
   background-position: center;
   background-size: cover;
-  position: relative; }
+  position: relative;
+  padding-top: 146px; }
   #main .title {
     text-align: center;
     margin: 10% 0px; }
@@ -783,10 +785,8 @@ th {
   align-items: center;
   justify-content: center; }
   #parthners .row .img-holder {
-    width: 100%; }
-    #parthners .row .img-holder img {
-      width: 100%;
-      height: 100%; }
+    width: 100%;
+    text-align: center; }
 
 #contact .title {
   font-size: 46px;
