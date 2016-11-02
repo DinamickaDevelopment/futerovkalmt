@@ -42,6 +42,17 @@ $('.pop-up .closebtn').bind('click', function () {
         $('.pop-up,.dark-layout').fadeOut(200);
     }
 });
+//-----------------------------------------------------------
+$('.clickable_btn').bind('click', function () {
+    if ($('.clickable_btn + .futer-pop-up').css('display') == "none") {
+        $('.clickable_btn + .futer-pop-up,.dark-layout').fadeIn(200);
+    }
+})
+$('.clickable_btn + .futer-pop-up .closebtn').bind('click', function () {
+    if ($('.clickable_btn + .futer-pop-up').css('display') == "block") {
+        $('.clickable_btn + .futer-pop-up,.dark-layout').fadeOut(200);
+    }
+});
 //------------------------------------------------------
 $(".features-tips").bind("click", function () {
     if ($(this).children('.tips-pop-up').css('display') == "none") {
