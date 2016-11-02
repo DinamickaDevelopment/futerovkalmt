@@ -185,7 +185,7 @@ $text-color: #2c3e50;
 
     .title {
         text-align: center;
-        margin: 10% 0px;
+        margin: 4% 0px;
 
         span {
             display: block;
@@ -206,7 +206,7 @@ $text-color: #2c3e50;
 
     .subtitle {
         text-align: center;
-        margin-bottom: 9%;
+        margin-bottom: 30%;
 
         .about1 {
             @include setFont(52px,200,white,"proxima-nova", sans-serif);
@@ -386,11 +386,9 @@ $text-color: #2c3e50;
         margin: 0 auto;
         display: block;
     }
-
     /*.futer-img button:focus + .futer-pop-up {
         display: block;
     }*/
-
     .futer-pop-up {
         width: 85%;
         position: fixed;
@@ -863,7 +861,7 @@ footer {
     //-----------------------------------------
     #main {
         .title {
-            margin: 23% 0px;
+            margin: 10% 0px;
 
             .row-1 {
                 font-size: 34px;
@@ -877,7 +875,7 @@ footer {
         }
 
         .subtitle {
-            margin-bottom: 26%;
+            margin-bottom: 270px;
 
             .about1 {
                 font-size: 23px;
@@ -1012,7 +1010,7 @@ footer {
                 button {
                     width: 100%;
                     height: auto;
-                    padding:0px;
+                    padding: 0px;
                 }
 
                 img {
@@ -1065,9 +1063,12 @@ footer {
 
 @media (min-width: 768px) and (max-width:992px) {
     #main {
+        .title {
+            margin: 2%;
+        }
 
         .subtitle {
-            margin-bottom: 16%;
+            margin-bottom: 37%;
 
             .about1 {
                 font-size: 32px;
@@ -1186,9 +1187,13 @@ footer {
     }
     //-----------------------------------------
     #main {
+        .title {
+            margin-bottom: 2%;
+        }
+
         .subtitle {
             text-align: center;
-            margin-bottom: 15%;
+            margin-bottom: 30%;
         }
     }
 }
