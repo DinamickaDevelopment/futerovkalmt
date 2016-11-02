@@ -1030,6 +1030,16 @@ footer {
     font-size: 15px; }
   .dark-layout {
     display: none !important; }
+  #references .cards-holder .card {
+    width: 80%;
+    height: auto; }
+    #references .cards-holder .card button {
+      width: 100%;
+      height: auto;
+      padding: 0px; }
+    #references .cards-holder .card img {
+      width: 100%;
+      height: auto; }
   #contact .contact-holder .contact-area .contact-info p {
     font-size: 14px; }
   footer {

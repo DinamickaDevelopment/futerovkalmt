@@ -907,7 +907,7 @@ footer {
     }
     //----------------------------------------
     #pros-and-cons {
-        background-image:linear-gradient(to bottom, #ecf0f1 0%, #ecf0f1 50%, #333542 50%, #333542 100%);
+        background-image: linear-gradient(to bottom, #ecf0f1 0%, #ecf0f1 50%, #333542 50%, #333542 100%);
 
         .futer-img img {
             width: 100%;
@@ -919,7 +919,6 @@ footer {
             text-align: center;
             padding: 0 5px;
             height: 302px;
-
         }
 
         .tips_holder {
@@ -1002,7 +1001,27 @@ footer {
     .dark-layout {
         display: none !important;
     }
+    //-----------------------------------------
+    #references {
 
+        .cards-holder {
+            .card {
+                width: 80%;
+                height: auto;
+
+                button {
+                    width: 100%;
+                    height: auto;
+                    padding:0px;
+                }
+
+                img {
+                    width: 100%;
+                    height: auto;
+                }
+            }
+        }
+    }
     //-----------------------------------------
     #contact {
         .contact-holder {
