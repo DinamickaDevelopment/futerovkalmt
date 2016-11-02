@@ -453,31 +453,29 @@ th {
         cursor: pointer; }
 
 .border-r-b {
-  border-right: 2px solid #f45c43; }
+  border-right: 4px solid #f45c43; }
 
-.border-l-t {
-  border-left: 2px solid #f45c43; }
+.gluefuter .title {
+  color: #2c3e50 !important; }
 
-.gluefuter {
-  padding-bottom: 79px; }
-  .gluefuter .title {
-    color: #2c3e50 !important; }
-  .gluefuter .futer-content {
-    color: #2c3e50 !important; }
-  .gluefuter .futer-content {
-    text-align: right; }
-  .gluefuter .tips_holder {
-    padding-top: 60px;
-    display: -webkit-flex;
-    -webkit-align-items: center;
-    align-items: center;
-    -webkit-justify-content: flex-end;
-    justify-content: flex-end; }
-    .gluefuter .tips_holder .tips {
-      background-color: #f45c43; }
-      .gluefuter .tips_holder .tips:before {
-        background-color: #f45c43;
-        left: 100%; }
+.gluefuter .futer-content {
+  color: #2c3e50 !important; }
+
+.gluefuter .futer-content {
+  text-align: right; }
+
+.gluefuter .tips_holder {
+  padding-top: 60px;
+  display: -webkit-flex;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: flex-end;
+  justify-content: flex-end; }
+  .gluefuter .tips_holder .tips {
+    background-color: #f45c43; }
+    .gluefuter .tips_holder .tips:before {
+      background-color: #f45c43;
+      left: 100%; }
 
 .monolitefuter .tips_holder {
   display: -webkit-flex;
@@ -510,7 +508,9 @@ th {
   #pros-and-cons .futer-img button {
     background: none;
     border: none;
-    outline: none; }
+    outline: none;
+    margin: 0 auto;
+    display: block; }
   #pros-and-cons .futer-img button:focus + .futer-pop-up {
     display: block; }
   #pros-and-cons .futer-pop-up {
@@ -981,25 +981,22 @@ footer {
     width: 99%;
     padding: 32px 5px; }
   #pros-and-cons {
-    background-image: linear-gradient(to bottom, #ecf0f1 0%, #ecf0f1 49%, #333542 49%, #333542 100%); }
+    background-image: linear-gradient(to bottom, #ecf0f1 0%, #ecf0f1 50%, #333542 50%, #333542 100%); }
     #pros-and-cons .futer-img img {
       width: 100%;
       height: 100%; }
     #pros-and-cons .futer-content {
       font-size: 15px;
       text-align: center;
-      padding: 0 5px; }
+      padding: 0 5px;
+      height: 302px; }
     #pros-and-cons .tips_holder .tips {
       font-size: 11px; }
       #pros-and-cons .tips_holder .tips:before {
         width: 21%; }
     #pros-and-cons .border-r-b {
       border-right: none;
-      border-bottom: 2px solid #f45c43;
-      padding-bottom: 21px; }
-    #pros-and-cons .border-l-t {
-      border-left: none;
-      border-top: 2px solid #f45c43; }
+      border-bottom: 4px solid #f45c43; }
   .mobile-hide {
     display: none; }
   .mobile-show {

@@ -315,16 +315,11 @@ $text-color: #2c3e50;
 //video section
 //futerovka section
 .border-r-b {
-    border-right: 2px solid #f45c43;
+    border-right: 4px solid #f45c43;
 }
 
-.border-l-t {
-    border-left: 2px solid #f45c43;
-}
 
 .gluefuter {
-    padding-bottom: 79px;
-
     .title {
         color: $text-color !important;
     }
@@ -388,6 +383,8 @@ $text-color: #2c3e50;
         background: none;
         border: none;
         outline: none;
+        margin: 0 auto;
+        display: block;
     }
 
     .futer-img button:focus + .futer-pop-up {
@@ -910,7 +907,7 @@ footer {
     }
     //----------------------------------------
     #pros-and-cons {
-        background-image: linear-gradient(to bottom, #ecf0f1 0%, #ecf0f1 49%, #333542 49%, #333542 100%);
+        background-image:linear-gradient(to bottom, #ecf0f1 0%, #ecf0f1 50%, #333542 50%, #333542 100%);
 
         .futer-img img {
             width: 100%;
@@ -921,6 +918,8 @@ footer {
             font-size: 15px;
             text-align: center;
             padding: 0 5px;
+            height: 302px;
+
         }
 
         .tips_holder {
@@ -935,13 +934,7 @@ footer {
 
         .border-r-b {
             border-right: none;
-            border-bottom: 2px solid #f45c43;
-            padding-bottom: 21px;
-        }
-
-        .border-l-t {
-            border-left: none;
-            border-top: 2px solid #f45c43;
+            border-bottom: 4px solid #f45c43;
         }
     }
 
