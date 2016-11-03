@@ -239,7 +239,12 @@ $text-color: #2c3e50;
 //features section
 #features {
     padding: 30px 0;
-
+    .superklasnijclass{
+        font-size:14px;
+        p{
+            font-size:1.3em;
+        }
+    }
     .title {
         @include setFont(26px,100,$general-color,"proxima-nova", sans-serif);
         letter-spacing: 0.025em;
@@ -313,6 +318,10 @@ $text-color: #2c3e50;
     }
 }
 //video section
+.iframe-youtube{
+    display:block;
+    margin:0 auto;
+}
 //futerovka section
 .border-r-b {
     border-right: 4px solid #f45c43;

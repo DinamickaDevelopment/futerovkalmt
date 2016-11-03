@@ -1,8 +1,8 @@
 ﻿//Logic for adaptive iframe of video with saving of ratio
 var videoResize = function () {
     unit = Math.round($(window).width() / 16);
-    width = $(window).width();
-    height = unit * 9;
+    width = $(window).width()*0.8;
+    height = (unit * 9)*0.8;
     $('.iframe-youtube').attr("width", width);
     $('.iframe-youtube').attr("height", height);
     $('#video').css("height", height+"px");
