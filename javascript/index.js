@@ -44,12 +44,12 @@ $('.pop-up .closebtn').bind('click', function () {
 });
 //-----------------------------------------------------------
 $('.clickable_btn').bind('click', function () {
-    if ($(this).siblings('.futer-pop-up').css('display') == "none") {
-        $(this).siblings('.futer-pop-up').fadeIn(200);
+    if ($(this).siblings('.futer-pop-up,.refer-pop-up').css('display') == "none") {
+        $(this).siblings('.futer-pop-up,.refer-pop-up').fadeIn(200);
         $('.dark-layout').fadeIn(200);
     }
 })
-$('.clickable_btn + .futer-pop-up .closebtn').bind('click', function () {
+$('.clickable_btn + .futer-pop-up .closebtn, .clickable_btn + .refer-pop-up .closebtn').bind('click', function () {
     $('.dark-layout').fadeOut(200);
     $(this).parent().fadeOut(200);
 });

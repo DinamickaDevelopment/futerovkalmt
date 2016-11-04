@@ -523,7 +523,7 @@ th {
     margin: 0 auto;
     display: block; }
   #pros-and-cons .futer-pop-up {
-    width: 85%;
+    width: 40%;
     position: fixed;
     top: 50%;
     left: 50%;
@@ -537,6 +537,11 @@ th {
     font-weight: 400;
     font-family: "proxima-nova", sans-serif;
     color: #2c3e50; }
+    #pros-and-cons .futer-pop-up p {
+      width: 100%;
+      text-align: center;
+      margin: 10px 20px;
+      font-size: 20px; }
     #pros-and-cons .futer-pop-up img {
       margin: 0 auto;
       display: block; }
