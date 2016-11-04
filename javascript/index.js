@@ -44,14 +44,14 @@ $('.pop-up .closebtn').bind('click', function () {
 });
 //-----------------------------------------------------------
 $('.clickable_btn').bind('click', function () {
-    if ($('.clickable_btn + .futer-pop-up').css('display') == "none") {
-        $('.clickable_btn + .futer-pop-up,.dark-layout').fadeIn(200);
+    if ($(this).siblings('.futer-pop-up').css('display') == "none") {
+        $(this).siblings('.futer-pop-up').fadeIn(200);
+        $('.dark-layout').fadeIn(200);
     }
 })
 $('.clickable_btn + .futer-pop-up .closebtn').bind('click', function () {
-    if ($('.clickable_btn + .futer-pop-up').css('display') == "block") {
-        $('.clickable_btn + .futer-pop-up,.dark-layout').fadeOut(200);
-    }
+    $('.dark-layout').fadeOut(200);
+    $(this).parent().fadeOut(200);
 });
 //------------------------------------------------------
 $(".features-tips").bind("click", function () {

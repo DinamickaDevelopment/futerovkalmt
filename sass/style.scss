@@ -239,12 +239,15 @@ $text-color: #2c3e50;
 //features section
 #features {
     padding: 30px 0;
-    .superklasnijclass{
-        font-size:14px;
-        p{
-            font-size:1.3em;
+
+    .superklasnijclass {
+        font-size: 14px;
+
+        p, li {
+            font-size: 1.3em;
         }
     }
+
     .title {
         @include setFont(26px,100,$general-color,"proxima-nova", sans-serif);
         letter-spacing: 0.025em;
@@ -305,7 +308,7 @@ $text-color: #2c3e50;
             background-color: white;
             box-shadow: 0px 0px 9px 2px #000000;
             display: none;
-            @include setFont(16px,400,$text-color,"proxima-nova", sans-serif);
+            @include setFont(1.3em,400,$text-color,"proxima-nova", sans-serif);
 
             .closebtn {
                 position: absolute;
@@ -318,9 +321,9 @@ $text-color: #2c3e50;
     }
 }
 //video section
-.iframe-youtube{
-    display:block;
-    margin:0 auto;
+.iframe-youtube {
+    display: block;
+    margin: 0 auto;
 }
 //futerovka section
 .border-r-b {
@@ -410,6 +413,11 @@ $text-color: #2c3e50;
         box-shadow: 0px 0px 9px 2px #000000;
         display: none;
         @include setFont(16px,400,$text-color,"proxima-nova", sans-serif);
+
+        img {
+            margin: 0 auto;
+            display: block;
+        }
 
         .closebtn {
             position: absolute;

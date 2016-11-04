@@ -372,7 +372,7 @@ th {
   padding: 30px 0; }
   #features .superklasnijclass {
     font-size: 14px; }
-    #features .superklasnijclass p {
+    #features .superklasnijclass p, #features .superklasnijclass li {
       font-size: 1.3em; }
   #features .title {
     font-size: 26px;
@@ -442,7 +442,7 @@ th {
       background-color: white;
       box-shadow: 0px 0px 9px 2px #000000;
       display: none;
-      font-size: 16px;
+      font-size: 1.3em;
       font-weight: 400;
       font-family: "proxima-nova", sans-serif;
       color: #2c3e50; }
@@ -537,6 +537,9 @@ th {
     font-weight: 400;
     font-family: "proxima-nova", sans-serif;
     color: #2c3e50; }
+    #pros-and-cons .futer-pop-up img {
+      margin: 0 auto;
+      display: block; }
     #pros-and-cons .futer-pop-up .closebtn {
       position: absolute;
       top: 2%;
