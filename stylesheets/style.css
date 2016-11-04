@@ -543,6 +543,8 @@ th {
       margin: 10px 20px;
       font-size: 20px; }
     #pros-and-cons .futer-pop-up img {
+      width: 100%;
+      height: auto;
       margin: 0 auto;
       display: block; }
     #pros-and-cons .futer-pop-up .closebtn {
