@@ -6,6 +6,7 @@ $text-color: #2c3e50;
 
 @mixin display-flex($align-item: center,$justify-content: center) {
     display: -webkit-flex;
+    display: flex;
     -webkit-align-items: $align-item;
     align-items: $align-item;
     -webkit-justify-content: $justify-content;
@@ -86,8 +87,11 @@ $text-color: #2c3e50;
     }
 
     .menu-section {
+        display: -webkit-flex;
         display: flex;
+        -webkit-justify-content: space-around;
         justify-content: space-around;
+        -webkit-align-items: center;
         align-items: center;
 
         .menu-element {
@@ -274,6 +278,7 @@ $text-color: #2c3e50;
         .tips-icon {
             width: 49px;
             height: 56px;
+            -webkit-flex-shrink: 0;
             flex-shrink: 0;
             background-image: url('../img/icon-spirte.png');
 
@@ -436,6 +441,7 @@ $text-color: #2c3e50;
     }
 
     .tips_holder {
+        -webkit-flex-wrap: wrap;
         flex-wrap: wrap;
 
         .tips {
@@ -660,6 +666,7 @@ $text-color: #2c3e50;
 
     .cards-holder {
         @include display-flex(center,center);
+        -webkit-flex-wrap: wrap;
         flex-wrap: wrap;
 
         .card {
@@ -719,6 +726,7 @@ $text-color: #2c3e50;
 
     .row {
         @include display-flex(center,center);
+        -webkit-flex-wrap: wrap;
         flex-wrap: wrap;
 
         .img-holder {
@@ -822,7 +830,9 @@ footer {
     }
 
     nav {
+        display: -webkit-flex;
         display: flex;
+        -webit-flex-flow: column wrap;
         flex-flow: column wrap;
 
         a {
@@ -1061,6 +1071,7 @@ footer {
         padding: 50px 0 20px;
 
         .row {
+            -weblit-flex-flow: column wrap;
             flex-flow: column wrap;
         }
 
@@ -1161,7 +1172,9 @@ footer {
         }
 
         nav {
+            display: -webkit-flex;
             display: flex;
+            -webkit-flex-flow: column wrap;
             flex-flow: column wrap;
 
             a {

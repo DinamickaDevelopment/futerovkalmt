@@ -233,12 +233,14 @@ th {
   background: #ecf0f1;
   height: 70px;
   display: -webkit-flex;
+  display: flex;
   -webkit-align-items: center;
   align-items: center;
   -webkit-justify-content: center;
   justify-content: center; }
   .header-content .row {
     display: -webkit-flex;
+    display: flex;
     -webkit-align-items: center;
     align-items: center;
     -webkit-justify-content: space-around;
@@ -248,8 +250,11 @@ th {
       width: 100%;
       text-align: center; }
   .header-content .menu-section {
+    display: -webkit-flex;
     display: flex;
+    -webkit-justify-content: space-around;
     justify-content: space-around;
+    -webkit-align-items: center;
     align-items: center; }
     .header-content .menu-section .menu-element a {
       font-size: 18px;
@@ -261,6 +266,7 @@ th {
         color: #1c2833; }
   .header-content .logo .content {
     display: -webkit-flex;
+    display: flex;
     -webkit-align-items: center;
     align-items: center;
     -webkit-justify-content: center;
@@ -392,12 +398,14 @@ th {
     letter-spacing: 0.005em; }
   #features .features-img {
     display: -webkit-flex;
+    display: flex;
     -webkit-align-items: center;
     align-items: center;
     -webkit-justify-content: flex-end;
     justify-content: flex-end; }
   #features .features-tips {
     display: -webkit-flex;
+    display: flex;
     -webkit-align-items: center;
     align-items: center;
     -webkit-justify-content: flex-start;
@@ -407,6 +415,7 @@ th {
     #features .features-tips .tips-icon {
       width: 49px;
       height: 56px;
+      -webkit-flex-shrink: 0;
       flex-shrink: 0;
       background-image: url("../img/icon-spirte.png"); }
       #features .features-tips .tips-icon.icon-1 {
@@ -475,6 +484,7 @@ th {
 .gluefuter .tips_holder {
   padding-top: 60px;
   display: -webkit-flex;
+  display: flex;
   -webkit-align-items: center;
   align-items: center;
   -webkit-justify-content: flex-end;
@@ -487,6 +497,7 @@ th {
 
 .monolitefuter .tips_holder {
   display: -webkit-flex;
+  display: flex;
   -webkit-align-items: center;
   align-items: center;
   -webkit-justify-content: flex-start;
@@ -557,6 +568,7 @@ th {
       color: #2c3e50;
       cursor: pointer; }
   #pros-and-cons .tips_holder {
+    -webkit-flex-wrap: wrap;
     flex-wrap: wrap; }
     #pros-and-cons .tips_holder .tips {
       width: 100%;
@@ -565,6 +577,7 @@ th {
       position: relative;
       padding: 0 5px;
       display: -webkit-flex;
+      display: flex;
       -webkit-align-items: center;
       align-items: center;
       -webkit-justify-content: center;
@@ -604,6 +617,7 @@ th {
     cursor: pointer;
     transition: left 0.3s linear,right 0.3s linear;
     display: -webkit-flex;
+    display: flex;
     -webkit-align-items: center;
     align-items: center;
     -webkit-justify-content: center;
@@ -622,6 +636,7 @@ th {
 .roundabout-moveable-item {
   display: block;
   display: -webkit-flex;
+  display: flex;
   -webkit-align-items: center;
   align-items: center;
   -webkit-justify-content: center;
@@ -738,6 +753,7 @@ th {
     display: none; }
     #table .pop-up .pop-up-wrapper {
       display: -webkit-flex;
+      display: flex;
       -webkit-align-items: center;
       align-items: center;
       -webkit-justify-content: center;
@@ -775,10 +791,12 @@ th {
 
 #references .cards-holder {
   display: -webkit-flex;
+  display: flex;
   -webkit-align-items: center;
   align-items: center;
   -webkit-justify-content: center;
   justify-content: center;
+  -webkit-flex-wrap: wrap;
   flex-wrap: wrap; }
   #references .cards-holder .card {
     margin: 5px;
@@ -837,10 +855,12 @@ th {
 
 #parthners .row {
   display: -webkit-flex;
+  display: flex;
   -webkit-align-items: center;
   align-items: center;
   -webkit-justify-content: center;
   justify-content: center;
+  -webkit-flex-wrap: wrap;
   flex-wrap: wrap; }
   #parthners .row .img-holder {
     width: 100%;
@@ -862,6 +882,7 @@ th {
   height: 325px;
   background-color: green;
   display: -webkit-flex;
+  display: flex;
   -webkit-align-items: flex-end;
   align-items: flex-end;
   -webkit-justify-content: center;
@@ -921,6 +942,7 @@ footer {
   padding: 50px 0; }
   footer .row {
     display: -webkit-flex;
+    display: flex;
     -webkit-align-items: center;
     align-items: center;
     -webkit-justify-content: center;
@@ -941,7 +963,9 @@ footer {
       width: 100%;
       display: block; }
   footer nav {
+    display: -webkit-flex;
     display: flex;
+    -webit-flex-flow: column wrap;
     flex-flow: column wrap; }
     footer nav a {
       text-align: right;
@@ -1064,6 +1088,7 @@ footer {
   footer {
     padding: 50px 0 20px; }
     footer .row {
+      -weblit-flex-flow: column wrap;
       flex-flow: column wrap; }
     footer .content {
       padding-bottom: 10px;
@@ -1111,7 +1136,9 @@ footer {
     width: 100%;
     height: 100%; }
   footer nav {
+    display: -webkit-flex;
     display: flex;
+    -webkit-flex-flow: column wrap;
     flex-flow: column wrap; }
     footer nav a {
       text-align: right;
