@@ -351,7 +351,6 @@ $text-color: #2c3e50;
 
     .tips_holder {
         padding-top: 60px;
-        @include display-flex(center, flex-end);
 
         .tips {
             background-color: #f45c43;
@@ -368,7 +367,6 @@ $text-color: #2c3e50;
 
 
     .tips_holder {
-        @include display-flex(center, flex-start);
 
         .tips {
             background-color: $general-color;
@@ -454,6 +452,7 @@ $text-color: #2c3e50;
             @include setFont(15px,400,white,"proxima-nova", sans-serif);
 
             &:before {
+                top: 30px;
                 content: '';
                 width: 11%;
                 height: 2px;
@@ -463,7 +462,7 @@ $text-color: #2c3e50;
     }
 }
 
-//galery section
+//gallery section
 #galery {
     position: relative;
     background-image: url('../img/gallary-bg.png');
