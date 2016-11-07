@@ -963,7 +963,7 @@ footer {
       font-family: "proxima-nova", sans-serif;
       color: white;
       margin: 4px 0; }
-      footer nav a:hover {
+      footer nav a:hover, footer nav a:active {
         color: #f45c43;
         text-decoration: none; }
 
@@ -988,7 +988,7 @@ footer {
   #pros-and-cons .futer-pop-up p {
     margin: 10px auto; } }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   #header .burger-menu {
     display: block; }
   .header-content {

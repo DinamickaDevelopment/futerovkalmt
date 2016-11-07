@@ -842,7 +842,7 @@ footer {
             @include setFont(16px,400,white,"proxima-nova", sans-serif);
             margin: 4px 0;
 
-            &:hover {
+            &:hover,&:active {
                 color: #f45c43;
                 text-decoration: none;
             }
@@ -877,7 +877,7 @@ footer {
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
     #header {
 
         .burger-menu {
