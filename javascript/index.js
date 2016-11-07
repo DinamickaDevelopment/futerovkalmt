@@ -174,4 +174,5 @@ $('.header-content .menu-element a,footer nav a ').on('click', function (event) 
     $('.roundabout-in-focus').addClass('next-slide');
     $('.prev').css('left', (parseInt($('.roundabout-in-focus').css("left")) - 40) + 'px');
     $('.next').css('left', (parseInt($('.roundabout-in-focus').css("left")) + $('.roundabout-in-focus').width() - 3) + 'px');
+
 }(jQuery));
