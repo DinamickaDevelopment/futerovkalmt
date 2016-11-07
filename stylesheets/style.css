@@ -378,7 +378,7 @@ th {
   padding: 30px 0; }
   #features .superklasnijclass {
     font-size: 14px; }
-    #features .superklasnijclass p, #features .superklasnijclass li {
+    #features .superklasnijclass p, #features .superklasnijclass li, #features .superklasnijclass b {
       font-size: 1.3em; }
   #features .title {
     font-size: 26px;
