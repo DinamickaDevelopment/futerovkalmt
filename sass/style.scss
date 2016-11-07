@@ -677,11 +677,11 @@ $text-color: #2c3e50;
             .corp-name {
                 display: block;
                 width: 100%;
-                height: 35px;
+                height: 70px;
                 text-align: center;
                 @include setFont(17px,200,white,"proxima-nova", sans-serif);
                 position: absolute;
-                bottom: 14px;
+                bottom: 3px;
             }
         }
     }
@@ -714,6 +714,7 @@ $text-color: #2c3e50;
             right: 3%;
             @include setFont(24px, 400, $text-color,inherit);
             cursor: pointer;
+            z-index:9999999;
         }
     }
 }
@@ -854,6 +855,28 @@ footer {
     padding: 10px 0px 10px 15px;
 }
 //Adaptive section
+@media (max-width: 450px) {
+    #features .features-tips .tips-pop-up {
+        text-align: left !important;
+        font-size: 1em;
+        padding: 32px 10px !important;
+    }
+
+    #references .refer-pop-up {
+        padding: 20px 10px;
+        font-size: 12px;
+        width: 90%;
+    }
+
+    #pros-and-cons .futer-pop-up {
+        width: 90%;
+    }
+
+    #pros-and-cons .futer-pop-up p {
+        margin: 10px auto;
+    }
+}
+
 @media (max-width: 768px) {
     #header {
 
@@ -941,9 +964,11 @@ footer {
     //----------------------------------------
     #pros-and-cons {
         background-image: linear-gradient(to bottom, #ecf0f1 0%, #ecf0f1 50%, #333542 50%, #333542 100%);
-        .title{
-            font-size:24px;
-       }
+
+        .title {
+            font-size: 24px;
+        }
+
         .futer-img img {
             width: 100%;
             height: 100%;
@@ -1223,7 +1248,6 @@ footer {
     //-----------------------------------------
     footer {
         .footer-logo img {
-
             width: 100%;
             height: 100%;
         }

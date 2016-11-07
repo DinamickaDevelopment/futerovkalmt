@@ -792,14 +792,14 @@ th {
     #references .cards-holder .card .corp-name {
       display: block;
       width: 100%;
-      height: 35px;
+      height: 70px;
       text-align: center;
       font-size: 17px;
       font-weight: 200;
       font-family: "proxima-nova", sans-serif;
       color: white;
       position: absolute;
-      bottom: 14px; }
+      bottom: 3px; }
 
 #references .pop-upLogic button {
   background: none;
@@ -831,7 +831,8 @@ th {
     font-weight: 400;
     font-family: inherit;
     color: #2c3e50;
-    cursor: pointer; }
+    cursor: pointer;
+    z-index: 9999999; }
 
 #parthners .title {
   font-size: 46px;
@@ -972,6 +973,20 @@ footer {
   font-family: "proxima-nova", sans-serif;
   color: #2c3e50;
   padding: 10px 0px 10px 15px; }
+
+@media (max-width: 450px) {
+  #features .features-tips .tips-pop-up {
+    text-align: left !important;
+    font-size: 1em;
+    padding: 32px 10px !important; }
+  #references .refer-pop-up {
+    padding: 20px 10px;
+    font-size: 12px;
+    width: 90%; }
+  #pros-and-cons .futer-pop-up {
+    width: 90%; }
+  #pros-and-cons .futer-pop-up p {
+    margin: 10px auto; } }
 
 @media (max-width: 768px) {
   #header .burger-menu {
