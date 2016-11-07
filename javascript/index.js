@@ -76,10 +76,10 @@ $('.burger-menu').bind('blur', function () {
     $('.buger-elements-wrapper').removeClass('expanded');
 })
 //Smooth scroll to anchor
-$('.header-content .menu-element a,footer nav a ').on('click', function (event) {
+$('.header-content .menu-element a,footer nav a,.burger-element a ').on('click', function (event) {
     event.preventDefault();
     $('html, body').animate({
-        scrollTop: $($.attr(this, 'href')).offset().top - 70
+        scrollTop: $($.attr(this, 'href')).offset().top - 80
     }, 400);
 });
 /**
