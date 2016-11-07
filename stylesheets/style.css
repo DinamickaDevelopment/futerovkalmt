@@ -963,6 +963,9 @@ footer {
       font-family: "proxima-nova", sans-serif;
       color: white;
       margin: 4px 0; }
+      footer nav a:focus {
+        color: white;
+        text-decoration: none; }
       footer nav a:hover, footer nav a:active {
         color: #f45c43;
         text-decoration: none; }

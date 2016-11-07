@@ -841,7 +841,10 @@ footer {
             text-align: right;
             @include setFont(16px,400,white,"proxima-nova", sans-serif);
             margin: 4px 0;
-
+            &:focus{
+                color:white;
+                text-decoration:none;
+            }
             &:hover,&:active {
                 color: #f45c43;
                 text-decoration: none;
